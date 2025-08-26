@@ -7,18 +7,13 @@ import net.iaxsro.rpgstats.network.ClientboundSyncPlayerStatsPacket;
 import net.iaxsro.rpgstats.network.PacketHandler;
 import net.iaxsro.rpgstats.registry.AttributeRegistry;
 import net.iaxsro.rpgstats.util.AttributeUtil;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
-import java.util.Map;
 import java.util.UUID;
 
 public class LevelingManager {
@@ -79,15 +74,11 @@ public class LevelingManager {
                 // 6. Aplicar Modificadores
                 AttributeCalculator.applyAttributeModifiers(player, newBonuses, newLevelNumber, newLevelUUID, previousLevelUUID);
 
-                // 7. Persistir Datos del Nuevo Nivel
-                PersistenceService.saveLevelData(player, newLevelNumber, newLevelUUID, newBonuses);
-                LOGGER.debug("Datos del nivel {} persistidos.", newLevelNumber);
-
-                // 8. Sincronizar Capacidad Actualizada al Cliente
+                // 7. Sincronizar Capacidad Actualizada al Cliente
                 PacketHandler.sendToPlayer(player, new ClientboundSyncPlayerStatsPacket(stats.writeNBT()));
                 LOGGER.debug("Capacidad PlayerStats sincronizada al cliente.");
 
-                // 9. Restaurar Salud
+                // 8. Restaurar Salud
                 player.setHealth(player.getMaxHealth());
                 LOGGER.debug("Salud restaurada a {}", player.getHealth());
 
@@ -115,19 +106,13 @@ public class LevelingManager {
                 UUID currentUUID = stats.getCurrentLevelUUID();
 
                 if (currentUUID != null && currentLevel > 0) {
-                    UUID previousUUID = PersistenceService.getUUIDForLevel(player, currentLevel - 1);
-                    LOGGER.debug("Respawn: Intentando obtener UUID para nivel previo {}: {}", currentLevel - 1, previousUUID);
-
                     AttributeCalculator.CalculatedBonuses currentBonuses = AttributeCalculator.calculateBonuses(player);
-                    AttributeCalculator.applyAttributeModifiers(player, currentBonuses, currentLevel, currentUUID, previousUUID);
+                    // Elimina modificadores existentes del mismo nivel y vuelve a aplicarlos
+                    AttributeCalculator.applyAttributeModifiers(player, currentBonuses, currentLevel, currentUUID, currentUUID);
                     LOGGER.debug("Modificadores reaplicados post-respawn para nivel {}.", currentLevel);
-
                 } else if (currentLevel > 0) {
                     // Caso anómalo: tiene nivel pero no UUID.
                     LOGGER.warn("Jugador {} tiene nivel {} pero no UUID de nivel al respawnear. Reaplicación de modificadores puede ser incompleta.", player.getName().getString(), currentLevel);
-                    // Considerar si intentar aplicar sin quitar los previos:
-                    // AttributeCalculator.CalculatedBonuses currentBonuses = AttributeCalculator.calculateBonuses(player);
-                    // AttributeCalculator.applyAttributeModifiers(player, currentBonuses, currentLevel, UUID.randomUUID(), null); // Ojo con UUID random
                 }
 
                 // Restaura la salud al máximo (después de reaplicar modificadores)
@@ -158,105 +143,4 @@ public class LevelingManager {
     }
 
 
-    /**
-     * Intenta revertir al jugador a un nivel específico.
-     * ADVERTENCIA: Operación compleja que depende de datos persistidos precisos.
-     *
-     * @param source      El CommandSourceStack para enviar feedback.
-     * @param player      El jugador a revertir.
-     * @param targetLevel El nivel al que se quiere revertir.
-     * @return true si la operación fue (conceptualmente) exitosa, false en caso contrario.
-     */
-    public static boolean revertToLevel(CommandSourceStack source, ServerPlayer player, int targetLevel) {
-        LOGGER.warn("Intentando revertir a {} al nivel {}.", player.getName().getString(), targetLevel);
-
-        LazyOptional<IPlayerStats> statsOptional = player.getCapability(PlayerStats.PLAYER_STATS_CAPABILITY);
-
-        // 1. Validaciones iniciales (incluyendo chequeo de capacidad)
-        if (!statsOptional.isPresent()) {
-            source.sendFailure(Component.literal("No se pudo obtener PlayerStats para " + player.getName().getString()));
-            return false;
-        }
-        // ifPresent para obtener stats de forma segura
-        final boolean[] success = {false}; // Usar array para modificar desde lambda
-        statsOptional.ifPresent(stats -> {
-            if (targetLevel < 0) {
-                source.sendFailure(Component.literal("El nivel objetivo no puede ser negativo."));
-                return; // Sale de la lambda
-            }
-            if (targetLevel >= stats.getLevel()) {
-                source.sendFailure(Component.literal("El nivel objetivo debe ser menor que el nivel actual (" + stats.getLevel() + ")."));
-                return; // Sale de la lambda
-            }
-
-            // 2. Cargar datos del nivel objetivo
-            PersistenceService.LevelSaveData targetLevelData = PersistenceService.loadLevelSaveData(player, targetLevel);
-            if (targetLevelData == null) {
-                source.sendFailure(Component.literal("No se encontraron datos guardados para el nivel " + targetLevel + ". No se puede revertir."));
-                return; // Sale de la lambda
-            }
-
-            // 3. Obtener UUID del nivel ANTERIOR al objetivo
-            UUID previousLevelUUID = (targetLevel > 0) ? PersistenceService.getUUIDForLevel(player, targetLevel - 1) : null;
-
-            // 4. Restaurar Atributos Base
-            LOGGER.debug("Restaurando atributos base al estado del nivel {}", targetLevel);
-            boolean attributesRestored = true;
-            for (Map.Entry<String, Double> entry : targetLevelData.baseAttributes().entrySet()) {
-                ResourceLocation attributeKey = new ResourceLocation(RpgStatsMod.MOD_ID, entry.getKey()); // Asume que la key guardada es el path
-                Attribute attribute = ForgeRegistries.ATTRIBUTES.getValue(attributeKey);
-                if (attribute != null) {
-                    AttributeInstance instance = player.getAttribute(attribute);
-                    if (instance != null) {
-                        instance.setBaseValue(entry.getValue());
-                        LOGGER.trace("  Base {}: {}", entry.getKey(), entry.getValue());
-                    } else {
-                        LOGGER.error("¡Atributo {} ({}) no encontrado en el jugador {} al intentar revertir!", entry.getKey(), attributeKey, player.getName().getString());
-                        attributesRestored = false;
-                    }
-                } else {
-                    LOGGER.error("¡Atributo {} ({}) no encontrado en el registro al intentar revertir!", entry.getKey(), attributeKey);
-                    attributesRestored = false;
-                }
-            }
-            if (!attributesRestored) {
-                source.sendFailure(Component.literal("Error al restaurar uno o más atributos base. Abortando reversión. Ver logs."));
-                return; // Sale de la lambda
-            }
-
-            // 5. Recalcular Bonificaciones para el nivel objetivo
-            AttributeCalculator.CalculatedBonuses targetBonuses = AttributeCalculator.calculateBonuses(player);
-
-            // 6. Aplicar Modificadores (quita los actuales, aplica los del target)
-            AttributeCalculator.applyAttributeModifiers(player, targetBonuses, targetLevel, targetLevelData.levelUUID(), stats.getCurrentLevelUUID()); // Usa el UUID *actual* como 'previous'
-
-            // 7. Actualizar la Capacidad del Jugador
-            stats.setLevel(targetLevel);
-            stats.setCurrentLevelUUID(targetLevelData.levelUUID());
-            // Resetear puntos temporales
-            stats.setStrengthPoints(0);
-            stats.setDexterityPoints(0);
-            stats.setVitalityPoints(0);
-            stats.setConstitutionPoints(0);
-            stats.setIntelligencePoints(0);
-            stats.setStrengthIterations(0);
-            stats.setDexterityIterations(0);
-            stats.setVitalityIterations(0);
-            stats.setConstitutionIterations(0);
-            stats.setIntelligenceIterations(0);
-
-            // 8. Eliminar Datos Persistentes de niveles superiores
-            PersistenceService.deleteLevelDataAbove(player, targetLevel);
-
-            // 9. Sincronizar Capacidad y Restaurar Salud
-            PacketHandler.sendToPlayer(player, new ClientboundSyncPlayerStatsPacket(stats.writeNBT()));
-            player.setHealth(player.getMaxHealth());
-
-            LOGGER.info("Jugador {} revertido exitosamente al nivel {}.", player.getName().getString(), targetLevel);
-            success[0] = true; // Marcar como éxito
-
-        }); // Fin de statsOptional.ifPresent
-
-        return success[0]; // Devuelve el resultado
-    }
 }
