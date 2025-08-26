@@ -6,6 +6,7 @@ import net.iaxsro.rpgstats.capabilities.PlayerStats;
 import net.iaxsro.rpgstats.network.ClientboundSyncPlayerStatsPacket;
 import net.iaxsro.rpgstats.network.PacketHandler;
 import net.iaxsro.rpgstats.registry.AttributeRegistry;
+import net.iaxsro.rpgstats.system.PersistenceService;
 import net.iaxsro.rpgstats.util.AttributeUtil;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.network.chat.Component;
@@ -24,6 +25,9 @@ import java.util.UUID;
 public class LevelingManager {
 
     private static final Logger LOGGER = RpgStatsMod.LOGGER;
+
+    // UUID estático utilizado para los modificadores de nivel
+    public static final UUID LEVEL_BONUS_MODIFIER_UUID = UUID.fromString("ec8b45a7-1cdd-45f3-9ad4-6e7f4a770e4f");
 
     /**
      * Procesa la subida de nivel para un jugador.
@@ -112,22 +116,13 @@ public class LevelingManager {
             statsOptional.ifPresent(stats -> {
                 // --- Lógica de post-respawn aquí dentro ---
                 int currentLevel = stats.getLevel();
-                UUID currentUUID = stats.getCurrentLevelUUID();
 
-                if (currentUUID != null && currentLevel > 0) {
-                    UUID previousUUID = PersistenceService.getUUIDForLevel(player, currentLevel - 1);
-                    LOGGER.debug("Respawn: Intentando obtener UUID para nivel previo {}: {}", currentLevel - 1, previousUUID);
-
+                if (currentLevel > 0) {
                     AttributeCalculator.CalculatedBonuses currentBonuses = AttributeCalculator.calculateBonuses(player);
-                    AttributeCalculator.applyAttributeModifiers(player, currentBonuses, currentLevel, currentUUID, previousUUID);
+                    AttributeCalculator.applyAttributeModifiers(player, currentBonuses, currentLevel,
+                            LEVEL_BONUS_MODIFIER_UUID, LEVEL_BONUS_MODIFIER_UUID);
                     LOGGER.debug("Modificadores reaplicados post-respawn para nivel {}.", currentLevel);
 
-                } else if (currentLevel > 0) {
-                    // Caso anómalo: tiene nivel pero no UUID.
-                    LOGGER.warn("Jugador {} tiene nivel {} pero no UUID de nivel al respawnear. Reaplicación de modificadores puede ser incompleta.", player.getName().getString(), currentLevel);
-                    // Considerar si intentar aplicar sin quitar los previos:
-                    // AttributeCalculator.CalculatedBonuses currentBonuses = AttributeCalculator.calculateBonuses(player);
-                    // AttributeCalculator.applyAttributeModifiers(player, currentBonuses, currentLevel, UUID.randomUUID(), null); // Ojo con UUID random
                 }
 
                 // Restaura la salud al máximo (después de reaplicar modificadores)
