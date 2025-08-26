@@ -24,6 +24,7 @@ import java.util.UUID;
 public class LevelingManager {
 
     private static final Logger LOGGER = RpgStatsMod.LOGGER;
+    private static final UUID LEVEL_BONUS_UUID = UUID.fromString("c0ffee00-0000-0000-0000-000000000001");
 
     /**
      * Procesa la subida de nivel para un jugador.
@@ -37,12 +38,10 @@ public class LevelingManager {
             statsOptional.ifPresent(stats -> {
                 // --- Toda la lógica de level up va aquí dentro ---
                 int currentLevel = stats.getLevel(); // Ahora es int
-                UUID previousLevelUUID = stats.getCurrentLevelUUID();
-                UUID newLevelUUID = UUID.randomUUID();
                 int newLevelNumber = currentLevel + 1;
 
-                LOGGER.debug("Nivel actual: {}, UUID anterior: {}", currentLevel, previousLevelUUID);
-                LOGGER.debug("Nuevo nivel: {}, Nuevo UUID: {}", newLevelNumber, newLevelUUID);
+                LOGGER.debug("Nivel actual: {}", currentLevel);
+                LOGGER.debug("Nuevo nivel: {}", newLevelNumber);
 
                 // 2. Actualizar Atributos Base
                 double strPoints = stats.getStrengthPoints();
@@ -69,25 +68,20 @@ public class LevelingManager {
                 stats.setConstitutionIterations(0);
                 stats.setIntelligenceIterations(0);
 
-                // 4. Actualizar Nivel y UUID en la Capacidad
+                // 4. Actualizar Nivel en la Capacidad
                 stats.setLevel(newLevelNumber);
-                stats.setCurrentLevelUUID(newLevelUUID);
 
                 // 5. Recalcular Bonificaciones
                 AttributeCalculator.CalculatedBonuses newBonuses = AttributeCalculator.calculateBonuses(player);
 
-                // 6. Aplicar Modificadores
-                AttributeCalculator.applyAttributeModifiers(player, newBonuses, newLevelNumber, newLevelUUID, previousLevelUUID);
+                // 6. Aplicar Modificadores con UUID fijo
+                AttributeCalculator.applyAttributeModifiers(player, newBonuses, newLevelNumber, LEVEL_BONUS_UUID, LEVEL_BONUS_UUID);
 
-                // 7. Persistir Datos del Nuevo Nivel
-                PersistenceService.saveLevelData(player, newLevelNumber, newLevelUUID, newBonuses);
-                LOGGER.debug("Datos del nivel {} persistidos.", newLevelNumber);
-
-                // 8. Sincronizar Capacidad Actualizada al Cliente
+                // 7. Sincronizar Capacidad Actualizada al Cliente
                 PacketHandler.sendToPlayer(player, new ClientboundSyncPlayerStatsPacket(stats.writeNBT()));
                 LOGGER.debug("Capacidad PlayerStats sincronizada al cliente.");
 
-                // 9. Restaurar Salud
+                // 8. Restaurar Salud
                 player.setHealth(player.getMaxHealth());
                 LOGGER.debug("Salud restaurada a {}", player.getHealth());
 
