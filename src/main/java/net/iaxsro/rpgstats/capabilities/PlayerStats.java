@@ -4,12 +4,10 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.capabilities.CapabilityToken;
-import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Objects;
-import java.util.UUID;
 
 public class PlayerStats implements IPlayerStats {
 
@@ -34,7 +32,6 @@ public class PlayerStats implements IPlayerStats {
     private static final String NBT_KEY_LEVEL = "PlayerLevel";
     private static final String NBT_KEY_NICKNAME = "Nickname";
     private static final String NBT_KEY_FIRST_JOIN = "FirstTimeJoining";
-    private static final String NBT_KEY_LEVEL_UUID = "CurrentLevelUUID";
 
     // --- Data Fields ---
     private double strengthPoints = 0.0;
@@ -52,8 +49,6 @@ public class PlayerStats implements IPlayerStats {
     private int level = 0;
     private String nickname = "";
     private boolean firstTimeJoining = true;
-    @Nullable
-    private UUID currentLevelUUID = null;
 
     @Override
     public CompoundTag saveNBTData() {
@@ -83,9 +78,6 @@ public class PlayerStats implements IPlayerStats {
         nbt.putInt(NBT_KEY_LEVEL, this.level);
         nbt.putString(NBT_KEY_NICKNAME, this.nickname != null ? this.nickname : "");
         nbt.putBoolean(NBT_KEY_FIRST_JOIN, this.firstTimeJoining);
-        if (this.currentLevelUUID != null) {
-            nbt.putUUID(NBT_KEY_LEVEL_UUID, this.currentLevelUUID);
-        }
         return nbt;
     }
 
@@ -111,12 +103,6 @@ public class PlayerStats implements IPlayerStats {
         setLevel(nbt.getInt(NBT_KEY_LEVEL));
         setNickname(nbt.getString(NBT_KEY_NICKNAME));
         setFirstTimeJoining(nbt.getBoolean(NBT_KEY_FIRST_JOIN));
-
-        if (nbt.hasUUID(NBT_KEY_LEVEL_UUID)) {
-            setCurrentLevelUUID(nbt.getUUID(NBT_KEY_LEVEL_UUID));
-        } else {
-            setCurrentLevelUUID(null);
-        }
     }
 
     // --- Getters ---
@@ -251,16 +237,6 @@ public class PlayerStats implements IPlayerStats {
         this.firstTimeJoining = value;
     }
 
-    @Override
-    @Nullable
-    public UUID getCurrentLevelUUID() {
-        return currentLevelUUID;
-    }
-
-    @Override
-    public void setCurrentLevelUUID(@Nullable UUID uuid) {
-        this.currentLevelUUID = uuid;
-    }
 
     // --- Adders ---
     @Override

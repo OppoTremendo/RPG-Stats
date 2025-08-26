@@ -37,7 +37,7 @@ public class LevelingManager {
             statsOptional.ifPresent(stats -> {
                 // --- Toda la lógica de level up va aquí dentro ---
                 int currentLevel = stats.getLevel(); // Ahora es int
-                UUID previousLevelUUID = stats.getCurrentLevelUUID();
+                UUID previousLevelUUID = PersistenceService.getUUIDForLevel(player, currentLevel);
                 UUID newLevelUUID = UUID.randomUUID();
                 int newLevelNumber = currentLevel + 1;
 
@@ -69,9 +69,8 @@ public class LevelingManager {
                 stats.setConstitutionIterations(0);
                 stats.setIntelligenceIterations(0);
 
-                // 4. Actualizar Nivel y UUID en la Capacidad
+                // 4. Actualizar Nivel en la Capacidad
                 stats.setLevel(newLevelNumber);
-                stats.setCurrentLevelUUID(newLevelUUID);
 
                 // 5. Recalcular Bonificaciones
                 AttributeCalculator.CalculatedBonuses newBonuses = AttributeCalculator.calculateBonuses(player);
@@ -112,7 +111,7 @@ public class LevelingManager {
             statsOptional.ifPresent(stats -> {
                 // --- Lógica de post-respawn aquí dentro ---
                 int currentLevel = stats.getLevel();
-                UUID currentUUID = stats.getCurrentLevelUUID();
+                UUID currentUUID = PersistenceService.getUUIDForLevel(player, currentLevel);
 
                 if (currentUUID != null && currentLevel > 0) {
                     UUID previousUUID = PersistenceService.getUUIDForLevel(player, currentLevel - 1);
@@ -228,11 +227,11 @@ public class LevelingManager {
             AttributeCalculator.CalculatedBonuses targetBonuses = AttributeCalculator.calculateBonuses(player);
 
             // 6. Aplicar Modificadores (quita los actuales, aplica los del target)
-            AttributeCalculator.applyAttributeModifiers(player, targetBonuses, targetLevel, targetLevelData.levelUUID(), stats.getCurrentLevelUUID()); // Usa el UUID *actual* como 'previous'
+            UUID currentLevelUUID = PersistenceService.getUUIDForLevel(player, stats.getLevel());
+            AttributeCalculator.applyAttributeModifiers(player, targetBonuses, targetLevel, targetLevelData.levelUUID(), currentLevelUUID); // Usa el UUID *actual* como 'previous'
 
             // 7. Actualizar la Capacidad del Jugador
             stats.setLevel(targetLevel);
-            stats.setCurrentLevelUUID(targetLevelData.levelUUID());
             // Resetear puntos temporales
             stats.setStrengthPoints(0);
             stats.setDexterityPoints(0);

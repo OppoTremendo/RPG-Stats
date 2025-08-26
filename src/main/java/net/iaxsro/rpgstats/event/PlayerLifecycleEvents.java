@@ -51,7 +51,7 @@ public class PlayerLifecycleEvents {
         // Reaplicar modificadores y restaurar salud
         player.getCapability(PlayerStats.PLAYER_STATS_CAPABILITY).ifPresent(stats -> {
             int currentLevel = stats.getLevel();
-            UUID currentUUID = stats.getCurrentLevelUUID();
+            UUID currentUUID = PersistenceService.getUUIDForLevel(player, currentLevel);
 
             AttributeCalculator.CalculatedBonuses currentBonuses = AttributeCalculator.calculateBonuses(player);
             @Nullable UUID previousUUID = currentLevel > 0

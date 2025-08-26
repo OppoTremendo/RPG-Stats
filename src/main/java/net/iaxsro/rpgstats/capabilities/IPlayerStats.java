@@ -2,9 +2,6 @@ package net.iaxsro.rpgstats.capabilities;
 
 import net.minecraft.nbt.CompoundTag;
 
-import javax.annotation.Nullable;
-import java.util.UUID;
-
 /**
  * Interfaz que define los datos y operaciones de la capacidad PlayerStats.
  * Esta es la interfaz que otras partes del mod deberían usar para interactuar
@@ -119,10 +116,4 @@ public interface IPlayerStats {
     boolean isFirstTimeJoining();
 
     void setFirstTimeJoining(boolean value);
-
-    // --- UUID del Nivel Actual ---
-    @Nullable
-    UUID getCurrentLevelUUID();
-
-    void setCurrentLevelUUID(@Nullable UUID uuid);
 }

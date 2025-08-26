@@ -4,7 +4,6 @@ import net.iaxsro.rpgstats.capabilities.IPlayerStats;
 import net.iaxsro.rpgstats.capabilities.PlayerStats;
 import net.minecraft.world.entity.LivingEntity;
 
-import java.util.UUID;
 import java.util.function.BiConsumer;
 import java.util.function.Function;
 
@@ -70,10 +69,6 @@ public class CapabilitiesAccessor {
     public static final StatAccessor<Boolean> firstTimeJoining = new StatAccessor<>(
             entity -> entity.getCapability(PlayerStats.PLAYER_STATS_CAPABILITY).map(IPlayerStats::isFirstTimeJoining).orElse(true),
             (entity, value) -> entity.getCapability(PlayerStats.PLAYER_STATS_CAPABILITY).ifPresent(stats -> stats.setFirstTimeJoining(value))
-    );
-    public static final StatAccessor<UUID> currentLevelUUID = new StatAccessor<>(
-            entity -> entity.getCapability(PlayerStats.PLAYER_STATS_CAPABILITY).map(IPlayerStats::getCurrentLevelUUID).orElse(null),
-            (entity, value) -> entity.getCapability(PlayerStats.PLAYER_STATS_CAPABILITY).ifPresent(stats -> stats.setCurrentLevelUUID(value))
     );
 
     /**
