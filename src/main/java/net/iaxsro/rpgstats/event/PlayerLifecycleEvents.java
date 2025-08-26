@@ -5,15 +5,14 @@ import net.iaxsro.rpgstats.capabilities.PlayerStats;
 import net.iaxsro.rpgstats.network.ClientboundSyncPlayerStatsPacket;
 import net.iaxsro.rpgstats.network.PacketHandler;
 import net.iaxsro.rpgstats.system.AttributeCalculator;
-import net.iaxsro.rpgstats.system.PersistenceService;
+import net.iaxsro.rpgstats.system.LevelingManager;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-import javax.annotation.Nullable;
-import java.util.UUID;
+
 
 // Escucha eventos en el bus de FORGE (implícito)
 @Mod.EventBusSubscriber(modid = RpgStatsMod.MOD_ID)
@@ -51,16 +50,11 @@ public class PlayerLifecycleEvents {
         // Reaplicar modificadores y restaurar salud
         player.getCapability(PlayerStats.PLAYER_STATS_CAPABILITY).ifPresent(stats -> {
             int currentLevel = stats.getLevel();
-            UUID currentUUID = stats.getCurrentLevelUUID();
 
             AttributeCalculator.CalculatedBonuses currentBonuses = AttributeCalculator.calculateBonuses(player);
-            @Nullable UUID previousUUID = currentLevel > 0
-                    ? PersistenceService.getUUIDForLevel(player, currentLevel - 1)
-                    : null;
-
-            AttributeCalculator.applyAttributeModifiers(player, currentBonuses, currentLevel, currentUUID, previousUUID);
-            RpgStatsMod.LOGGER.debug("Modificadores reaplicados para nivel {} (UUID: {}) tras respawn.",
-                    currentLevel, currentUUID);
+            AttributeCalculator.applyAttributeModifiers(player, currentBonuses, currentLevel,
+                    LevelingManager.LEVEL_BONUS_MODIFIER_UUID, LevelingManager.LEVEL_BONUS_MODIFIER_UUID);
+            RpgStatsMod.LOGGER.debug("Modificadores reaplicados para nivel {} tras respawn.", currentLevel);
 
             player.setHealth(player.getMaxHealth());
             RpgStatsMod.LOGGER.debug("Salud restaurada tras respawn para {}.", player.getName().getString());
