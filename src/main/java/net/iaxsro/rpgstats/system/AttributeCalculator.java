@@ -9,8 +9,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraftforge.common.ForgeConfigSpec;
-import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 
 import java.util.UUID;
@@ -19,6 +17,8 @@ import java.util.function.Supplier;
 public class AttributeCalculator {
 
     private static final Logger LOGGER = RpgStatsMod.LOGGER;
+    /** UUID constante usada para los modificadores aplicados por nivel. */
+    private static final UUID LEVEL_MODIFIER_UUID = UUID.fromString("289a8420-6947-48cd-bbdb-976f291b142c");
 
     // Atributos opcionales (EpicFight, Forge) - Obtenidos de forma segura
     // Es mejor obtenerlos una vez si se usan mucho, o usar Suppliers
@@ -49,66 +49,35 @@ public class AttributeCalculator {
 
     /**
      * Aplica las bonificaciones calculadas como modificadores de atributos permanentes a la entidad.
-     * También elimina los modificadores del nivel anterior si se proporciona el UUID.
      *
-     * @param entity            La entidad a la que aplicar los modificadores.
-     * @param bonuses           Las bonificaciones calculadas.
-     * @param levelNumber       El número del nivel actual (para el nombre del modificador).
-     * @param levelUUID         El UUID único para los modificadores de este nivel.
-     * @param previousLevelUUID El UUID de los modificadores del nivel anterior (puede ser null).
+     * @param entity  La entidad a la que aplicar los modificadores.
+     * @param bonuses Las bonificaciones calculadas.
      */
-    public static void applyAttributeModifiers(LivingEntity entity, CalculatedBonuses bonuses, int levelNumber, UUID levelUUID, @Nullable UUID previousLevelUUID) {
-        LOGGER.debug("Aplicando modificadores para nivel {} (UUID: {}) a {}", levelNumber, levelUUID, entity.getName().getString());
+    public static void applyAttributeModifiers(LivingEntity entity, CalculatedBonuses bonuses) {
+        LOGGER.debug("Aplicando modificadores a {}", entity.getName().getString());
 
-        // 1. Eliminar modificadores del nivel anterior
-        if (previousLevelUUID != null) {
-            LOGGER.debug("Eliminando modificadores del nivel anterior (UUID: {})", previousLevelUUID);
-            // Vanilla Attributes
-            AttributeUtil.removePermanentModifier(entity, Attributes.ATTACK_DAMAGE, previousLevelUUID);
-            AttributeUtil.removePermanentModifier(entity, Attributes.MOVEMENT_SPEED, previousLevelUUID);
-            AttributeUtil.removePermanentModifier(entity, Attributes.MAX_HEALTH, previousLevelUUID);
-            AttributeUtil.removePermanentModifier(entity, Attributes.ARMOR, previousLevelUUID);
-            AttributeUtil.removePermanentModifier(entity, Attributes.ATTACK_SPEED, previousLevelUUID);
-            AttributeUtil.removePermanentModifier(entity, Attributes.ARMOR_TOUGHNESS, previousLevelUUID);
-            AttributeUtil.removePermanentModifier(entity, Attributes.ATTACK_KNOCKBACK, previousLevelUUID);
-            AttributeUtil.removePermanentModifier(entity, Attributes.KNOCKBACK_RESISTANCE, previousLevelUUID);
-            // Forge Attributes
-            AttributeUtil.removePermanentModifier(entity, FORGE_SWIM_SPEED, previousLevelUUID);
-            // Epic Fight Attributes (usando Suppliers)
-            AttributeUtil.removePermanentModifier(entity, EF_IMPACT, previousLevelUUID);
-            AttributeUtil.removePermanentModifier(entity, EF_ARMOR_NEGATION, previousLevelUUID);
-            AttributeUtil.removePermanentModifier(entity, EF_STUN_ARMOR, previousLevelUUID);
-            AttributeUtil.removePermanentModifier(entity, EF_MAX_STAMINA, previousLevelUUID);
-            AttributeUtil.removePermanentModifier(entity, EF_STAMINA_REGEN, previousLevelUUID);
-            AttributeUtil.removePermanentModifier(entity, EF_WEIGHT, previousLevelUUID);
-        }
+        // Crear nuevos modificadores con UUID constante
+        String modifierName = "Level Bonus";
 
-        // 2. Crear nuevos modificadores
-        String modifierName = "Level " + levelNumber + " Bonus"; // Nombre más descriptivo
-
-        // Creamos los modificadores usando los valores de 'bonuses' y el nuevo levelUUID
-        AttributeModifier attackDamageModifier = new AttributeModifier(levelUUID, modifierName, bonuses.attackDamageAddition, AttributeModifier.Operation.ADDITION);
-        AttributeModifier movementSpeedModifier = new AttributeModifier(levelUUID, modifierName, bonuses.movementSpeedMultiplier, AttributeModifier.Operation.MULTIPLY_BASE); // Cambiado a Multiplicador
-        AttributeModifier maxHealthModifier = new AttributeModifier(levelUUID, modifierName, bonuses.totalMaxHealthAddition, AttributeModifier.Operation.ADDITION);
-        AttributeModifier armorModifier = new AttributeModifier(levelUUID, modifierName, bonuses.totalArmorAddition, AttributeModifier.Operation.ADDITION);
-        AttributeModifier attackSpeedModifier = new AttributeModifier(levelUUID, modifierName, bonuses.totalAttackSpeedAddition, AttributeModifier.Operation.ADDITION);
-        AttributeModifier armorToughnessModifier = new AttributeModifier(levelUUID, modifierName, bonuses.armorToughnessAddition, AttributeModifier.Operation.ADDITION);
-        AttributeModifier attackKnockbackModifier = new AttributeModifier(levelUUID, modifierName, bonuses.totalAttackKnockbackAddition, AttributeModifier.Operation.ADDITION);
-        AttributeModifier knockbackResistanceModifier = new AttributeModifier(levelUUID, modifierName, bonuses.knockbackResistanceAddition, AttributeModifier.Operation.ADDITION);
-        AttributeModifier swimSpeedModifier = new AttributeModifier(levelUUID, modifierName, bonuses.totalSwimSpeedAddition, AttributeModifier.Operation.ADDITION);
+        AttributeModifier attackDamageModifier = new AttributeModifier(LEVEL_MODIFIER_UUID, modifierName, bonuses.attackDamageAddition, AttributeModifier.Operation.ADDITION);
+        AttributeModifier movementSpeedModifier = new AttributeModifier(LEVEL_MODIFIER_UUID, modifierName, bonuses.movementSpeedMultiplier, AttributeModifier.Operation.MULTIPLY_BASE);
+        AttributeModifier maxHealthModifier = new AttributeModifier(LEVEL_MODIFIER_UUID, modifierName, bonuses.totalMaxHealthAddition, AttributeModifier.Operation.ADDITION);
+        AttributeModifier armorModifier = new AttributeModifier(LEVEL_MODIFIER_UUID, modifierName, bonuses.totalArmorAddition, AttributeModifier.Operation.ADDITION);
+        AttributeModifier attackSpeedModifier = new AttributeModifier(LEVEL_MODIFIER_UUID, modifierName, bonuses.totalAttackSpeedAddition, AttributeModifier.Operation.ADDITION);
+        AttributeModifier armorToughnessModifier = new AttributeModifier(LEVEL_MODIFIER_UUID, modifierName, bonuses.armorToughnessAddition, AttributeModifier.Operation.ADDITION);
+        AttributeModifier attackKnockbackModifier = new AttributeModifier(LEVEL_MODIFIER_UUID, modifierName, bonuses.totalAttackKnockbackAddition, AttributeModifier.Operation.ADDITION);
+        AttributeModifier knockbackResistanceModifier = new AttributeModifier(LEVEL_MODIFIER_UUID, modifierName, bonuses.knockbackResistanceAddition, AttributeModifier.Operation.ADDITION);
+        AttributeModifier swimSpeedModifier = new AttributeModifier(LEVEL_MODIFIER_UUID, modifierName, bonuses.totalSwimSpeedAddition, AttributeModifier.Operation.ADDITION);
         // Epic Fight
-        AttributeModifier impactModifier = new AttributeModifier(levelUUID, modifierName, bonuses.totalImpactAddition, AttributeModifier.Operation.ADDITION);
-        AttributeModifier armorNegationModifier = new AttributeModifier(levelUUID, modifierName, bonuses.totalArmorNegationAddition, AttributeModifier.Operation.ADDITION);
-        AttributeModifier stunArmorModifier = new AttributeModifier(levelUUID, modifierName, bonuses.stunArmorAddition, AttributeModifier.Operation.ADDITION);
-        AttributeModifier staminaModifier = new AttributeModifier(levelUUID, modifierName, bonuses.totalStaminaAddition, AttributeModifier.Operation.ADDITION);
-        AttributeModifier staminaRegenModifier = new AttributeModifier(levelUUID, modifierName, bonuses.totalStaminaRegenAddition, AttributeModifier.Operation.ADDITION);
-        // Weight Reduction: Originalmente era MULTIPLY_TOTAL con valor negativo.
-        // MULTIPLY_TOTAL aplica: Base * (1 + Mod1) * (1 + Mod2) ...
-        // Si queremos reducir un 10% (0.1), el modificador debe ser -0.1
-        // El bonus.totalWeightReduction es positivo, así que lo negamos.
-        AttributeModifier weightReductionModifier = new AttributeModifier(levelUUID, modifierName, -bonuses.totalWeightReduction, AttributeModifier.Operation.MULTIPLY_BASE); // Cambiado a MULTIPLY_BASE para consistencia
+        AttributeModifier impactModifier = new AttributeModifier(LEVEL_MODIFIER_UUID, modifierName, bonuses.totalImpactAddition, AttributeModifier.Operation.ADDITION);
+        AttributeModifier armorNegationModifier = new AttributeModifier(LEVEL_MODIFIER_UUID, modifierName, bonuses.totalArmorNegationAddition, AttributeModifier.Operation.ADDITION);
+        AttributeModifier stunArmorModifier = new AttributeModifier(LEVEL_MODIFIER_UUID, modifierName, bonuses.stunArmorAddition, AttributeModifier.Operation.ADDITION);
+        AttributeModifier staminaModifier = new AttributeModifier(LEVEL_MODIFIER_UUID, modifierName, bonuses.totalStaminaAddition, AttributeModifier.Operation.ADDITION);
+        AttributeModifier staminaRegenModifier = new AttributeModifier(LEVEL_MODIFIER_UUID, modifierName, bonuses.totalStaminaRegenAddition, AttributeModifier.Operation.ADDITION);
+        // Weight Reduction: el bonus.totalWeightReduction es positivo, por lo que se niega.
+        AttributeModifier weightReductionModifier = new AttributeModifier(LEVEL_MODIFIER_UUID, modifierName, -bonuses.totalWeightReduction, AttributeModifier.Operation.MULTIPLY_BASE);
 
-        // 3. Aplicar nuevos modificadores
+        // Aplicar nuevos modificadores
         LOGGER.debug("Aplicando nuevos modificadores...");
         // Vanilla Attributes
         AttributeUtil.addPermanentModifier(entity, Attributes.ATTACK_DAMAGE, attackDamageModifier);
@@ -129,7 +98,7 @@ public class AttributeCalculator {
         AttributeUtil.addPermanentModifier(entity, EF_STAMINA_REGEN, staminaRegenModifier);
         AttributeUtil.addPermanentModifier(entity, EF_WEIGHT, weightReductionModifier);
 
-        LOGGER.debug("Modificadores aplicados exitosamente para nivel {}.", levelNumber);
+        LOGGER.debug("Modificadores aplicados exitosamente.");
     }
 
 

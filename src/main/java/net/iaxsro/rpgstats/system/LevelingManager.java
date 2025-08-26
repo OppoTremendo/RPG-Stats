@@ -77,7 +77,7 @@ public class LevelingManager {
                 AttributeCalculator.CalculatedBonuses newBonuses = AttributeCalculator.calculateBonuses(player);
 
                 // 6. Aplicar Modificadores
-                AttributeCalculator.applyAttributeModifiers(player, newBonuses, newLevelNumber, newLevelUUID, previousLevelUUID);
+                AttributeCalculator.applyAttributeModifiers(player, newBonuses);
 
                 // 7. Persistir Datos del Nuevo Nivel
                 PersistenceService.saveLevelData(player, newLevelNumber, newLevelUUID, newBonuses);
@@ -112,22 +112,11 @@ public class LevelingManager {
             statsOptional.ifPresent(stats -> {
                 // --- Lógica de post-respawn aquí dentro ---
                 int currentLevel = stats.getLevel();
-                UUID currentUUID = stats.getCurrentLevelUUID();
 
-                if (currentUUID != null && currentLevel > 0) {
-                    UUID previousUUID = PersistenceService.getUUIDForLevel(player, currentLevel - 1);
-                    LOGGER.debug("Respawn: Intentando obtener UUID para nivel previo {}: {}", currentLevel - 1, previousUUID);
-
+                if (currentLevel > 0) {
                     AttributeCalculator.CalculatedBonuses currentBonuses = AttributeCalculator.calculateBonuses(player);
-                    AttributeCalculator.applyAttributeModifiers(player, currentBonuses, currentLevel, currentUUID, previousUUID);
+                    AttributeCalculator.applyAttributeModifiers(player, currentBonuses);
                     LOGGER.debug("Modificadores reaplicados post-respawn para nivel {}.", currentLevel);
-
-                } else if (currentLevel > 0) {
-                    // Caso anómalo: tiene nivel pero no UUID.
-                    LOGGER.warn("Jugador {} tiene nivel {} pero no UUID de nivel al respawnear. Reaplicación de modificadores puede ser incompleta.", player.getName().getString(), currentLevel);
-                    // Considerar si intentar aplicar sin quitar los previos:
-                    // AttributeCalculator.CalculatedBonuses currentBonuses = AttributeCalculator.calculateBonuses(player);
-                    // AttributeCalculator.applyAttributeModifiers(player, currentBonuses, currentLevel, UUID.randomUUID(), null); // Ojo con UUID random
                 }
 
                 // Restaura la salud al máximo (después de reaplicar modificadores)
@@ -227,8 +216,8 @@ public class LevelingManager {
             // 5. Recalcular Bonificaciones para el nivel objetivo
             AttributeCalculator.CalculatedBonuses targetBonuses = AttributeCalculator.calculateBonuses(player);
 
-            // 6. Aplicar Modificadores (quita los actuales, aplica los del target)
-            AttributeCalculator.applyAttributeModifiers(player, targetBonuses, targetLevel, targetLevelData.levelUUID(), stats.getCurrentLevelUUID()); // Usa el UUID *actual* como 'previous'
+            // 6. Aplicar Modificadores
+            AttributeCalculator.applyAttributeModifiers(player, targetBonuses);
 
             // 7. Actualizar la Capacidad del Jugador
             stats.setLevel(targetLevel);
