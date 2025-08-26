@@ -25,9 +25,12 @@ import java.util.UUID;
 public class LevelingManager {
 
     private static final Logger LOGGER = RpgStatsMod.LOGGER;
-    private static final UUID LEVEL_BONUS_UUID = UUID.fromString("c0ffee00-0000-0000-0000-000000000001");
 
-    // UUID estático utilizado para los modificadores de nivel
+    /**
+     * UUID estático utilizado para los modificadores de nivel.
+     * Mantener un único UUID garantiza que los modificadores previos se
+     * reemplacen correctamente al subir de nivel o reaparecer.
+     */
     public static final UUID LEVEL_BONUS_MODIFIER_UUID = UUID.fromString("ec8b45a7-1cdd-45f3-9ad4-6e7f4a770e4f");
 
     /**
@@ -79,7 +82,8 @@ public class LevelingManager {
                 AttributeCalculator.CalculatedBonuses newBonuses = AttributeCalculator.calculateBonuses(player);
 
                 // 6. Aplicar Modificadores con UUID fijo
-                AttributeCalculator.applyAttributeModifiers(player, newBonuses, newLevelNumber, LEVEL_BONUS_UUID, LEVEL_BONUS_UUID);
+                AttributeCalculator.applyAttributeModifiers(player, newBonuses, newLevelNumber,
+                        LEVEL_BONUS_MODIFIER_UUID, LEVEL_BONUS_MODIFIER_UUID);
 
                 // 7. Sincronizar Capacidad Actualizada al Cliente
                 PacketHandler.sendToPlayer(player, new ClientboundSyncPlayerStatsPacket(stats.writeNBT()));
