@@ -1,0 +1,78 @@
+
+#Configuration for RPG Stats Mod
+["RPG Stats"]
+
+	#Settings for the point gain formula
+	["RPG Stats".Formula]
+		#Multiplier for points gained through actions (e.g., combat, dodging). Default: 0.3
+		#Range: 0.0 ~ 100.0
+		pointsMultiplier = 0.3
+		#Ascending variation of the counter that divides initial points per action. Default: 0.005
+		#Range: 0.0 ~ 1.0
+		counterVariation = 0.005
+		#Exponent applied to the point divider calculation. Default: 1.5
+		#Range: 0.1 ~ 10.0
+		dividerExponent = 1.5
+
+	#Dividers for stats derived from Strength. Stat = Base + (Strength / Divider)
+	["RPG Stats".Strength]
+		#Range: 1.0 ~ 1.7976931348623157E308
+		attackDamageDivider = 30.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		impactDivider = 120.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		armorNegationDivider = 8.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		swimSpeedDivider = 2000.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		attackSpeedDivider = 500.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		attackKnockbackDivider = 600.0
+
+	#Dividers for stats derived from Dexterity. Stat = Base + (Dexterity / Divider), except Speed = Base * (1 + Dexterity/Divider)
+	["RPG Stats".Dexterity]
+		#Range: 1.0 ~ 1.7976931348623157E308
+		movementSpeedDivider = 8000.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		armorNegationDivider = 8.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		staminaDivider = 7.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		staminaRegenDivider = 500.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		swimSpeedDivider = 600.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		attackSpeedDivider = 1000.0
+
+	#Dividers for stats derived from Vitality. Stat = Base + (Vitality / Divider)
+	["RPG Stats".Vitality]
+		#Range: 1.0 ~ 1.7976931348623157E308
+		maxHealthDivider = 8.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		staminaRegenDivider = 500.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		armorDivider = 35.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		staminaDivider = 15.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		weightReductionDivider = 800.0
+
+	#Dividers for stats derived from Constitution. Stat = Base + (Constitution / Divider)
+	["RPG Stats".Constitution]
+		#Range: 1.0 ~ 1.7976931348623157E308
+		maxHealthDivider = 40.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		armorDivider = 10.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		stunArmorDivider = 25.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		impactDivider = 120.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		knockbackResistanceDivider = 100.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		weightReductionDivider = 800.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		attackKnockbackDivider = 300.0
+		#Range: 1.0 ~ 1.7976931348623157E308
+		armorToughnessDivider = 75.0
+

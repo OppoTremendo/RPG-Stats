@@ -1,0 +1,504 @@
+[26ago.2025 05:37:11.203] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, C:\Users\aotre\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mixin.config, rpgstats.mixins.json]
+[26ago.2025 05:37:11.214] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.16 by Eclipse Adoptium; OS Windows 11 arch amd64 version 10.0
+[26ago.2025 05:37:11.346] [main/WARN] [net.minecraftforge.fml.loading.FMLConfig/CORE]: Configuration file E:\Documents\GitHub\RPG-Stats\run\config\fml.toml is not correct. Correcting
+[26ago.2025 05:37:11.375] [main/INFO] [net.minecraftforge.fml.loading.FMLConfig/CORE]: Incorrect key [earlyWindowSkipGLVersions] was corrected from null to []
+[26ago.2025 05:37:11.376] [main/INFO] [net.minecraftforge.fml.loading.FMLConfig/CORE]: Incorrect key [earlyWindowLogHelpMessage] was corrected from null to true
+[26ago.2025 05:37:11.377] [main/INFO] [net.minecraftforge.fml.loading.FMLConfig/CORE]: Incorrect key [earlyWindowSquir] was corrected from null to false
+[26ago.2025 05:37:11.377] [main/INFO] [net.minecraftforge.fml.loading.FMLConfig/CORE]: Incorrect key [earlyWindowShowCPU] was corrected from null to false
+[26ago.2025 05:37:11.391] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[26ago.2025 05:37:11.455] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[26ago.2025 05:37:11.456] [main/INFO] [EARLYDISPLAY/]: If this message is the only thing at the bottom of your log before a crash, you probably have a driver issue.
+
+Possible solutions:
+A) Make sure Minecraft is set to prefer high performance graphics in the OS and/or driver control panel
+B) Check for driver updates on the graphics brand's website
+C) Try reinstalling your graphics drivers
+D) If still not working after trying all of the above, ask for further help on the Forge forums or Discord
+
+You can safely ignore this message if the game starts up successfully.
+[26ago.2025 05:37:11.656] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[26ago.2025 05:37:11.736] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/aotre/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[26ago.2025 05:37:11.763] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce RTX 3060 Ti/PCIe/SSE2 GL version 4.6.0 NVIDIA 580.97, NVIDIA Corporation
+[26ago.2025 05:37:12.093] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\aotre\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.0\f0c0b352173d0a378cbdcec9cfc4ba65899a721\javafmllanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[26ago.2025 05:37:12.096] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\aotre\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.0\e862740d8c84d08dbfedea412bef88fe42e727c5\lowcodelanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[26ago.2025 05:37:12.098] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\aotre\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.0\5719b3a297a33f877ed5dde4cb4bd75c859096af\mclanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[26ago.2025 05:37:12.099] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\aotre\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.0\235975dafa4309945b59c56b53f31dc5b65a6051\fmlcore-1.20.1-47.4.0.jar is missing mods.toml file
+[26ago.2025 05:37:12.431] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[26ago.2025 05:37:14.173] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[26ago.2025 05:37:14.191] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\aotre\.gradle\caches\forge_gradle\assets, --assetIndex, 5]
+[26ago.2025 05:37:14.337] [main/ERROR] [mixin/]: Failed reading REFMAP JSON from rpg_stats.refmap.json: java.lang.NullPointerException Cannot invoke "org.spongepowered.asm.mixin.refmap.ReferenceMapper.setResourceName(String)" because "mapper" is null
+[26ago.2025 05:37:14.339] [main/WARN] [mixin/]: Reference map 'rpg_stats.refmap.json' for rpgstats.mixins.json could not be read. If this is a development environment you can ignore this message
+[26ago.2025 05:37:14.559] [main/INFO] [mixin/]: Remapping refMap Pehkui-refmap.json using E:\Documents\GitHub\RPG-Stats\build\createSrgToMcp\output.srg
+[26ago.2025 05:37:14.617] [main/INFO] [mixin/]: Remapping refMap lionfishapi.refmap.json using E:\Documents\GitHub\RPG-Stats\build\createSrgToMcp\output.srg
+[26ago.2025 05:37:14.617] [main/INFO] [mixin/]: Remapping refMap cataclysm.refmap.json using E:\Documents\GitHub\RPG-Stats\build\createSrgToMcp\output.srg
+[26ago.2025 05:37:14.618] [main/INFO] [mixin/]: Remapping refMap curios.refmap.json using E:\Documents\GitHub\RPG-Stats\build\createSrgToMcp\output.srg
+[26ago.2025 05:37:14.619] [main/INFO] [mixin/]: Remapping refMap mixins.epicfight.refmap.json using E:\Documents\GitHub\RPG-Stats\build\createSrgToMcp\output.srg
+[26ago.2025 05:37:14.621] [main/INFO] [mixin/]: Remapping refMap player-animation-lib-minecraft_common-refmap.json using E:\Documents\GitHub\RPG-Stats\build\createSrgToMcp\output.srg
+[26ago.2025 05:37:15.340] [main/WARN] [mixin/]: Error loading class: net/irisshaders/iris/pipeline/programs/ExtendedShader (java.lang.ClassNotFoundException: net.irisshaders.iris.pipeline.programs.ExtendedShader)
+[26ago.2025 05:37:15.341] [main/WARN] [mixin/]: @Mixin target net.irisshaders.iris.pipeline.programs.ExtendedShader was not found mixins.epicfight.json:iris.MixinExtendedShader
+[26ago.2025 05:37:15.342] [main/WARN] [mixin/]: Error loading class: net/irisshaders/iris/pipeline/PipelineManager (java.lang.ClassNotFoundException: net.irisshaders.iris.pipeline.PipelineManager)
+[26ago.2025 05:37:15.342] [main/WARN] [mixin/]: @Mixin target net.irisshaders.iris.pipeline.PipelineManager was not found mixins.epicfight.json:iris.MixinPipelineManager
+[26ago.2025 05:37:15.343] [main/WARN] [mixin/]: Error loading class: dev/tr7zw/skinlayers/SkinUtil (java.lang.ClassNotFoundException: dev.tr7zw.skinlayers.SkinUtil)
+[26ago.2025 05:37:15.343] [main/WARN] [mixin/]: @Mixin target dev.tr7zw.skinlayers.SkinUtil was not found mixins.epicfight.json:skinlayers.MixinSkinUtil
+[26ago.2025 05:37:15.344] [main/WARN] [mixin/]: Error loading class: dev/tr7zw/skinlayers/versionless/render/CustomModelPart (java.lang.ClassNotFoundException: dev.tr7zw.skinlayers.versionless.render.CustomModelPart)
+[26ago.2025 05:37:15.344] [main/WARN] [mixin/]: @Mixin target dev.tr7zw.skinlayers.versionless.render.CustomModelPart was not found mixins.epicfight.json:skinlayers.MixinCustomModelPart
+[26ago.2025 05:37:15.345] [main/WARN] [mixin/]: Error loading class: dev/tr7zw/skinlayers/versionless/render/CustomizableCube (java.lang.ClassNotFoundException: dev.tr7zw.skinlayers.versionless.render.CustomizableCube)
+[26ago.2025 05:37:15.345] [main/WARN] [mixin/]: @Mixin target dev.tr7zw.skinlayers.versionless.render.CustomizableCube was not found mixins.epicfight.json:skinlayers.MixinCustomizableCubeWrapper$SkinLayer3DMixinCustomModelCube
+[26ago.2025 05:37:15.346] [main/WARN] [mixin/]: Error loading class: de/teamlapen/vampirism/client/renderer/entity/layers/VampirePlayerHeadLayer (java.lang.ClassNotFoundException: de.teamlapen.vampirism.client.renderer.entity.layers.VampirePlayerHeadLayer)
+[26ago.2025 05:37:15.346] [main/WARN] [mixin/]: @Mixin target de.teamlapen.vampirism.client.renderer.entity.layers.VampirePlayerHeadLayer was not found mixins.epicfight.json:teamlapen.MixinVampirePlayerHeadLayer
+[26ago.2025 05:37:15.347] [main/WARN] [mixin/]: Error loading class: de/teamlapen/werewolves/client/render/layer/HumanWerewolfLayer (java.lang.ClassNotFoundException: de.teamlapen.werewolves.client.render.layer.HumanWerewolfLayer)
+[26ago.2025 05:37:15.347] [main/WARN] [mixin/]: @Mixin target de.teamlapen.werewolves.client.render.layer.HumanWerewolfLayer was not found mixins.epicfight.json:teamlapen.MixinHumanWerewolfLayer
+[26ago.2025 05:37:15.422] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.6).
+[26ago.2025 05:37:16.300] [main/WARN] [oshi.driver.windows.perfmon.PerfmonDisabled/]: Invalid registry value type detected for PerfOS counters. Should be REG_DWORD. Ignoring: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfOS\Performance\Disable Performance Counters.
+[26ago.2025 05:37:16.545] [main/WARN] [oshi.util.platform.windows.PerfDataUtil/]: Failed to add PDH Counter: \Paging File(_Total)\% Usage, Error code: 0xC0000BB8
+[26ago.2025 05:37:16.545] [main/WARN] [oshi.util.platform.windows.PerfCounterQueryHandler/]: Failed to add counter for PDH counter: \Paging File(_Total)\% Usage
+[26ago.2025 05:37:16.545] [main/WARN] [oshi.util.platform.windows.PerfCounterQuery/]: Disabling further attempts to query Paging File.
+[26ago.2025 05:37:17.149] [main/WARN] [oshi.util.platform.windows.WmiQueryHandler/]: COM exception: Invalid Query: SELECT PERCENTUSAGE FROM Win32_PerfRawData_PerfOS_PagingFile
+[26ago.2025 05:37:18.814] [pool-4-thread-1/WARN] [mixin/]: @Final field nextHeadUpdate:[I in mixins.epicfight.json:common.MixinWitherBoss should be final
+[26ago.2025 05:37:18.814] [pool-4-thread-1/WARN] [mixin/]: @Final field idleHeadUpdates:[I in mixins.epicfight.json:common.MixinWitherBoss should be final
+[26ago.2025 05:37:19.939] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 113 milliseconds
+[26ago.2025 05:37:20.461] [pool-4-thread-1/WARN] [net.minecraft.network.syncher.SynchedEntityData/]: defineId called for: class net.minecraft.world.entity.LivingEntity from class yesman.epicfight.world.capabilities.entitypatch.LivingEntityPatch
+[26ago.2025 05:37:20.461] [pool-4-thread-1/WARN] [net.minecraft.network.syncher.SynchedEntityData/]: defineId called for: class net.minecraft.world.entity.LivingEntity from class yesman.epicfight.world.capabilities.entitypatch.LivingEntityPatch
+[26ago.2025 05:37:20.461] [pool-4-thread-1/WARN] [net.minecraft.network.syncher.SynchedEntityData/]: defineId called for: class net.minecraft.world.entity.LivingEntity from class yesman.epicfight.world.capabilities.entitypatch.LivingEntityPatch
+[26ago.2025 05:37:20.461] [pool-4-thread-1/WARN] [net.minecraft.network.syncher.SynchedEntityData/]: defineId called for: class net.minecraft.world.entity.LivingEntity from class yesman.epicfight.world.capabilities.entitypatch.LivingEntityPatch
+[26ago.2025 05:37:21.558] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/aotre/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_official_1.20.1/forge-1.20.1-47.4.0_mapped_official_1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[26ago.2025 05:37:21.558] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/aotre/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_official_1.20.1/forge-1.20.1-47.4.0_mapped_official_1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[26ago.2025 05:37:21.575] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[26ago.2025 05:37:21.578] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[26ago.2025 05:37:21.673] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
+[26ago.2025 05:37:21.871] [modloading-worker-0/INFO] [net.iaxsro.rpgstats.RpgStatsMod/]: Registrando Items para rpgstats
+[26ago.2025 05:37:21.916] [modloading-worker-0/INFO] [net.iaxsro.rpgstats.RpgStatsMod/]: Registrando Atributos para rpgstats
+[26ago.2025 05:37:21.920] [modloading-worker-0/INFO] [net.iaxsro.rpgstats.RpgStatsMod/]: Registrando Pestañas Creativas para rpgstats
+[26ago.2025 05:37:21.951] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.0, for MC 1.20.1 with MCP 20230612.114412
+[26ago.2025 05:37:21.951] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.0 Initialized
+[26ago.2025 05:37:21.951] [modloading-worker-0/INFO] [net.iaxsro.rpgstats.client.ClientSetup/]: Iniciando configuración del cliente para RPG Stats...
+[26ago.2025 05:37:21.953] [modloading-worker-0/INFO] [net.iaxsro.rpgstats.client.ClientSetup/]: Registrando eventos de Forge del cliente...
+[26ago.2025 05:37:21.964] [modloading-worker-0/INFO] [net.iaxsro.rpgstats.client.ClientSetup/]: Configuración del cliente inicializada para RPG Stats
+[26ago.2025 05:37:21.964] [modloading-worker-0/INFO] [net.iaxsro.rpgstats.RpgStatsMod/]: rpgstats Mod inicializado.
+[26ago.2025 05:37:22.150] [modloading-worker-0/INFO] [epicfight/]: Loaded mod compat: CuriosCompat
+[26ago.2025 05:37:22.160] [modloading-worker-0/INFO] [epicfight/]: Loaded mod compat: PlayerAnimatorCompat
+[26ago.2025 05:37:22.190] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager...
+[26ago.2025 05:37:22.194] [modloading-worker-0/INFO] [mezz.jei.library.load.PluginCaller/]: Sending ConfigManager took 3.214 ms
+[26ago.2025 05:37:22.667] [Render thread/INFO] [net.iaxsro.rpgstats.RpgStatsMod/]: Capacidad IPlayerStats registrada.
+[26ago.2025 05:37:22.824] [Render thread/INFO] [net.iaxsro.rpgstats.item.AttributePointGrantItem/]: AttributePointGrantItem creado con 1.0 puntos por uso
+[26ago.2025 05:37:23.107] [Render thread/WARN] [net.minecraft.network.syncher.SynchedEntityData/]: defineId called for: class net.minecraft.world.entity.player.Player from class yesman.epicfight.world.capabilities.entitypatch.player.PlayerPatch
+[26ago.2025 05:37:23.123] [Render thread/WARN] [net.minecraft.network.syncher.SynchedEntityData/]: defineId called for: class net.minecraft.world.entity.boss.wither.WitherBoss from class yesman.epicfight.world.capabilities.entitypatch.boss.WitherPatch
+[26ago.2025 05:37:23.123] [Render thread/WARN] [net.minecraft.network.syncher.SynchedEntityData/]: defineId called for: class net.minecraft.world.entity.boss.wither.WitherBoss from class yesman.epicfight.world.capabilities.entitypatch.boss.WitherPatch
+[26ago.2025 05:37:23.123] [Render thread/WARN] [net.minecraft.network.syncher.SynchedEntityData/]: defineId called for: class net.minecraft.world.entity.boss.wither.WitherBoss from class yesman.epicfight.world.capabilities.entitypatch.boss.WitherPatch
+[26ago.2025 05:37:23.123] [Render thread/WARN] [net.minecraft.network.syncher.SynchedEntityData/]: defineId called for: class net.minecraft.world.entity.boss.wither.WitherBoss from class yesman.epicfight.world.capabilities.entitypatch.boss.WitherPatch
+[26ago.2025 05:37:23.123] [Render thread/WARN] [net.minecraft.network.syncher.SynchedEntityData/]: defineId called for: class net.minecraft.world.entity.boss.wither.WitherBoss from class yesman.epicfight.world.capabilities.entitypatch.boss.WitherPatch
+[26ago.2025 05:37:23.123] [Render thread/WARN] [net.minecraft.network.syncher.SynchedEntityData/]: defineId called for: class net.minecraft.world.entity.boss.wither.WitherBoss from class yesman.epicfight.world.capabilities.entitypatch.boss.WitherPatch
+[26ago.2025 05:37:23.123] [Render thread/WARN] [net.minecraft.network.syncher.SynchedEntityData/]: defineId called for: class net.minecraft.world.entity.boss.wither.WitherBoss from class yesman.epicfight.world.capabilities.entitypatch.boss.WitherPatch
+[26ago.2025 05:37:23.124] [Render thread/WARN] [net.minecraft.network.syncher.SynchedEntityData/]: defineId called for: class net.minecraft.world.entity.boss.wither.WitherBoss from class yesman.epicfight.world.capabilities.entitypatch.boss.WitherPatch
+[26ago.2025 05:37:23.124] [Render thread/WARN] [net.minecraft.network.syncher.SynchedEntityData/]: defineId called for: class net.minecraft.world.entity.boss.wither.WitherBoss from class yesman.epicfight.world.capabilities.entitypatch.boss.WitherPatch
+[26ago.2025 05:37:23.125] [Render thread/INFO] [net.iaxsro.rpgstats.RpgStatsMod/]: MOD BUS EVENT: EntityAttributeModificationEvent
+[26ago.2025 05:37:23.125] [Render thread/INFO] [net.iaxsro.rpgstats.RpgStatsMod/]: Atributos de RPGStats añadidos a EntityType.PLAYER.
+[26ago.2025 05:37:23.408] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [rpgstats]
+[26ago.2025 05:37:23.565] [Render thread/INFO] [net.iaxsro.rpgstats.client.event.ClientGuiEvents/]: Iniciando registro de overlays de GUI...
+[26ago.2025 05:37:23.566] [Render thread/INFO] [net.iaxsro.rpgstats.client.event.ClientGuiEvents/]: Overlay de puntos de atributos registrado exitosamente
+[26ago.2025 05:37:23.567] [Render thread/INFO] [net.iaxsro.rpgstats.client.event.ClientGuiEvents/]: Overlay de valores de atributos registrado exitosamente
+[26ago.2025 05:37:23.568] [Render thread/INFO] [net.iaxsro.rpgstats.client.event.ClientGuiEvents/]: Overlay de atributos modificados registrado exitosamente
+[26ago.2025 05:37:23.568] [Render thread/INFO] [net.iaxsro.rpgstats.client.event.ClientGuiEvents/]: Test overlay registrado exitosamente (oculto por defecto)
+[26ago.2025 05:37:23.568] [Render thread/INFO] [net.iaxsro.rpgstats.client.event.ClientGuiEvents/]: Todos los overlays registrados exitosamente:
+[26ago.2025 05:37:23.568] [Render thread/INFO] [net.iaxsro.rpgstats.client.event.ClientGuiEvents/]:   - Overlay de puntos de atributos (esquina inferior derecha)
+[26ago.2025 05:37:23.568] [Render thread/INFO] [net.iaxsro.rpgstats.client.event.ClientGuiEvents/]:   - Overlay de valores de atributos (esquina inferior izquierda)
+[26ago.2025 05:37:23.568] [Render thread/INFO] [net.iaxsro.rpgstats.client.event.ClientGuiEvents/]:   - Overlay de atributos modificados (esquina superior derecha)
+[26ago.2025 05:37:23.568] [Render thread/INFO] [net.iaxsro.rpgstats.client.event.ClientGuiEvents/]:   - Test overlay (debugging - oculto por defecto)
+[26ago.2025 05:37:23.622] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
+[26ago.2025 05:37:23.637] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file E:\Documents\GitHub\RPG-Stats\run\config\curios-client.toml is not correct. Correcting
+[26ago.2025 05:37:23.637] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:23.637] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.renderCurios was corrected from null to its default, true. 
+[26ago.2025 05:37:23.637] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.enableButton was corrected from null to its default, true. 
+[26ago.2025 05:37:23.637] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.buttonXOffset was corrected from null to its default, 0. 
+[26ago.2025 05:37:23.637] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.buttonYOffset was corrected from null to its default, 0. 
+[26ago.2025 05:37:23.637] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.creativeButtonXOffset was corrected from null to its default, 0. 
+[26ago.2025 05:37:23.637] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.creativeButtonYOffset was corrected from null to its default, 0. 
+[26ago.2025 05:37:23.637] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.buttonCorner was corrected from null to its default, TOP_LEFT. 
+[26ago.2025 05:37:23.648] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file E:\Documents\GitHub\RPG-Stats\run\config\epicfight-client.toml is not correct. Correcting
+[26ago.2025 05:37:23.648] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:23.649] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.long_press_count was corrected from null to its default, 2. 
+[26ago.2025 05:37:23.649] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.max_hit_projectiles was corrected from null to its default, 30. 
+[26ago.2025 05:37:23.649] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.laser_pointer_color was corrected from null to its default, 0.328125. 
+[26ago.2025 05:37:23.649] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.enable_laser_pointer was corrected from null to its default, true. 
+[26ago.2025 05:37:23.649] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.camera_auto_switch was corrected from null to its default, false. 
+[26ago.2025 05:37:23.649] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.blood_effects was corrected from null to its default, true. 
+[26ago.2025 05:37:23.649] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.aiming_correction was corrected from null to its default, true. 
+[26ago.2025 05:37:23.649] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.show_epicfight_attributes was corrected from null to its default, true. 
+[26ago.2025 05:37:23.649] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.use_animation_shader was corrected from null to its default, false. 
+[26ago.2025 05:37:23.649] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.first_person_model was corrected from null to its default, true. 
+[26ago.2025 05:37:23.649] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.enable_pov_action was corrected from null to its default, true. 
+[26ago.2025 05:37:23.649] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.enable_cosmetics was corrected from null to its default, true. 
+[26ago.2025 05:37:23.650] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.combat_preferred_items was corrected from null to its default, []. 
+[26ago.2025 05:37:23.650] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.mining_preferred_items was corrected from null to its default, []. 
+[26ago.2025 05:37:23.650] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.show_target_indicator was corrected from null to its default, true. 
+[26ago.2025 05:37:23.654] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.health_bar_show_option was corrected from null to its default, hurt. 
+[26ago.2025 05:37:23.654] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.ui was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:23.654] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.ui.stamina_bar_x was corrected from null to its default, 120. 
+[26ago.2025 05:37:23.654] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.ui.stamina_bar_y was corrected from null to its default, 10. 
+[26ago.2025 05:37:23.654] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.ui.stamina_bar_x_base was corrected from null to its default, RIGHT. 
+[26ago.2025 05:37:23.654] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.ui.stamina_bar_y_base was corrected from null to its default, BOTTOM. 
+[26ago.2025 05:37:23.654] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.ui.weapon_innate_x was corrected from null to its default, 42. 
+[26ago.2025 05:37:23.654] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.ui.weapon_innate_y was corrected from null to its default, 48. 
+[26ago.2025 05:37:23.654] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.ui.weapon_innate_x_base was corrected from null to its default, RIGHT. 
+[26ago.2025 05:37:23.654] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.ui.weapon_innate_y_base was corrected from null to its default, BOTTOM. 
+[26ago.2025 05:37:23.654] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.ui.passives_x was corrected from null to its default, 70. 
+[26ago.2025 05:37:23.654] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.ui.passives_y was corrected from null to its default, 36. 
+[26ago.2025 05:37:23.654] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.ui.passives_x_base was corrected from null to its default, RIGHT. 
+[26ago.2025 05:37:23.655] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.ui.passives_y_base was corrected from null to its default, BOTTOM. 
+[26ago.2025 05:37:23.655] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.ui.passives_align_direction was corrected from null to its default, HORIZONTAL. 
+[26ago.2025 05:37:23.655] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.ui.charging_bar_x was corrected from null to its default, -119. 
+[26ago.2025 05:37:23.655] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.ui.charging_bar_y was corrected from null to its default, 60. 
+[26ago.2025 05:37:23.655] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.ui.charging_bar_x_base was corrected from null to its default, CENTER. 
+[26ago.2025 05:37:23.655] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key ingame.ui.charging_bar_y_base was corrected from null to its default, CENTER. 
+[26ago.2025 05:37:23.656] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key access_token was corrected from null to its default, . 
+[26ago.2025 05:37:23.657] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key refresh_token was corrected from null to its default, . 
+[26ago.2025 05:37:23.657] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key provider was corrected from null to its default, null. 
+[26ago.2025 05:37:23.725] [Worker-Main-2/WARN] [net.minecraft.client.sounds.SoundManager/]: File cataclysm:sounds/entity/maledictus_leap.ogg does not exist, cannot add it to event cataclysm:maledictus_leap
+[26ago.2025 05:37:23.803] [Worker-Main-10/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
+[26ago.2025 05:37:24.017] [Worker-Main-2/WARN] [net.minecraft.client.renderer.texture.SpriteContents/]: Unused frames in sprite cataclysm:item/cursed_eye: [8, 9]
+[26ago.2025 05:37:24.041] [Worker-Main-2/WARN] [net.minecraft.client.renderer.texture.SpriteLoader/]: Texture cataclysm:item/black_steel_axe with size 15x16 limits mip level from 4 to 0
+[26ago.2025 05:37:24.106] [modloading-worker-0/INFO] [epicfight/]: Created temporary lib file at: E:\Documents\GitHub\RPG-Stats\run\config\epicfight\native\ServerCommunicationHelper.dll
+[26ago.2025 05:37:24.106] [Thread-3/INFO] [epicfight/]: Created temporary lib file at: E:\Documents\GitHub\RPG-Stats\run\config\epicfight\native\ServerCommunicationHelper.dll
+[26ago.2025 05:37:24.230] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file E:\Documents\GitHub\RPG-Stats\run\config\pehkui-client.toml is not correct. Correcting
+[26ago.2025 05:37:24.230] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.230] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.minimumCameraDepth was corrected from null to its default, 3.051850947599719E-5. 
+[26ago.2025 05:37:24.232] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file E:\Documents\GitHub\RPG-Stats\run\config\forge-client.toml is not correct. Correcting
+[26ago.2025 05:37:24.233] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.233] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.alwaysSetupTerrainOffThread was corrected from null to its default, false. 
+[26ago.2025 05:37:24.233] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.experimentalForgeLightPipelineEnabled was corrected from null to its default, false. 
+[26ago.2025 05:37:24.233] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.showLoadWarnings was corrected from null to its default, true. 
+[26ago.2025 05:37:24.233] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.useCombinedDepthStencilAttachment was corrected from null to its default, false. 
+[26ago.2025 05:37:24.233] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.compressLanIPv6Addresses was corrected from null to its default, true. 
+[26ago.2025 05:37:24.233] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.calculateAllNormals was corrected from null to its default, false. 
+[26ago.2025 05:37:24.233] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.stabilizeDirectionGetNearest was corrected from null to its default, true. 
+[26ago.2025 05:37:24.233] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key client.allowMipmapLowering was corrected from null to its default, false. 
+[26ago.2025 05:37:24.235] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file E:\Documents\GitHub\RPG-Stats\run\config\cataclysm.toml is not correct. Correcting
+[26ago.2025 05:37:24.236] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Etc was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.236] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Etc.lavaVisionOpacity was corrected from null to its default, 0.5. 
+[26ago.2025 05:37:24.236] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Etc.shadersCompat was corrected from null to its default, false. 
+[26ago.2025 05:37:24.236] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Etc.ScreenShake(on/off) was corrected from null to its default, true. 
+[26ago.2025 05:37:24.236] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key bosses Common settings was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.236] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key bosses Common settings.custombossbar(on/off) was corrected from null to its default, true. 
+[26ago.2025 05:37:24.236] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key bosses Common settings.BossMusic(on/off) was corrected from null to its default, true. 
+[26ago.2025 05:37:24.236] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key bosses Common settings.BossMusicVolume was corrected from null to its default, 1. 
+[26ago.2025 05:37:24.236] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key bosses Common settings.ReturnHome was corrected from null to its default, 20. 
+[26ago.2025 05:37:24.237] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Weapon was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.237] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Weapon.Armor Infinity Durability(on/off) was corrected from null to its default, true. 
+[26ago.2025 05:37:24.237] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Weapon.BulwarkOfTheFlameCooldown was corrected from null to its default, 80. 
+[26ago.2025 05:37:24.237] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Weapon.GauntletOfBulwarkCooldown was corrected from null to its default, 80. 
+[26ago.2025 05:37:24.237] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Weapon.InfernalForgeCooldown was corrected from null to its default, 80. 
+[26ago.2025 05:37:24.237] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Weapon.VoidForgeCooldown was corrected from null to its default, 120. 
+[26ago.2025 05:37:24.237] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Weapon.TheIncineratorCooldown was corrected from null to its default, 400. 
+[26ago.2025 05:37:24.237] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Weapon.WASWMissileCooldown was corrected from null to its default, 40. 
+[26ago.2025 05:37:24.237] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Weapon.WASW's WitherMissiledamage was corrected from null to its default, 16.0. 
+[26ago.2025 05:37:24.237] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Weapon.WASWHowitzerCooldown was corrected from null to its default, 100. 
+[26ago.2025 05:37:24.237] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Weapon.VASWCooldown was corrected from null to its default, 120. 
+[26ago.2025 05:37:24.237] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Weapon.VoidCoreCooldown was corrected from null to its default, 160. 
+[26ago.2025 05:37:24.237] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Weapon.Sandstormcooldown was corrected from null to its default, 300. 
+[26ago.2025 05:37:24.237] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Weapon.SoulRenderCooldown was corrected from null to its default, 100. 
+[26ago.2025 05:37:24.237] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Weapon.gauntletofMaelstromCooldown was corrected from null to its default, 180. 
+[26ago.2025 05:37:24.237] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Weapon.immolatorCooldown was corrected from null to its default, 300. 
+[26ago.2025 05:37:24.237] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Block was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.237] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Block.Cursed Tombstone Summon cooldown Minute was corrected from null to its default, 1. 
+[26ago.2025 05:37:24.238] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.238] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.Voidrunedamage was corrected from null to its default, 7.0. 
+[26ago.2025 05:37:24.238] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.Ashenbreathdamage was corrected from null to its default, 4.0. 
+[26ago.2025 05:37:24.238] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.DeathLaserdamage was corrected from null to its default, 5.0. 
+[26ago.2025 05:37:24.238] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.DeathLaserHpdamage was corrected from null to its default, 5.0. 
+[26ago.2025 05:37:24.238] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.Laserdamage was corrected from null to its default, 7.0. 
+[26ago.2025 05:37:24.238] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.BlazingBonedamage was corrected from null to its default, 5.0. 
+[26ago.2025 05:37:24.238] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.LionfishSpikedamage was corrected from null to its default, 4.0. 
+[26ago.2025 05:37:24.238] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.WitherHowizterdamage was corrected from null to its default, 8.0. 
+[26ago.2025 05:37:24.238] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.DimensionalRiftdamage was corrected from null to its default, 10.0. 
+[26ago.2025 05:37:24.238] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.WitherHomingMissiledamage was corrected from null to its default, 3.0. 
+[26ago.2025 05:37:24.238] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.AbyssBlastdamage was corrected from null to its default, 10.0. 
+[26ago.2025 05:37:24.238] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.AbyssBlastHpdamage was corrected from null to its default, 0.1. 
+[26ago.2025 05:37:24.238] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.AbyssOrbdamage was corrected from null to its default, 4.0. 
+[26ago.2025 05:37:24.238] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.Lavabombradius was corrected from null to its default, 2. 
+[26ago.2025 05:37:24.239] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.Amethyst Cluster Damage was corrected from null to its default, 12.0. 
+[26ago.2025 05:37:24.239] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.Sandstorm Damage was corrected from null to its default, 5.0. 
+[26ago.2025 05:37:24.239] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.Ancient Desert Stele Damage was corrected from null to its default, 18.0. 
+[26ago.2025 05:37:24.239] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.Phantom Arrow Damage was corrected from null to its default, 5.0. 
+[26ago.2025 05:37:24.239] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.Phantom Halberd Damage was corrected from null to its default, 12.0. 
+[26ago.2025 05:37:24.239] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.Cursed Sandstorm Damage was corrected from null to its default, 6.0. 
+[26ago.2025 05:37:24.239] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.Flame Jet Damage was corrected from null to its default, 7.0. 
+[26ago.2025 05:37:24.239] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Entity damage.Flare Bomb Damage was corrected from null to its default, 7.0. 
+[26ago.2025 05:37:24.239] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Guardian was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.240] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Guardian.EnderGuardianHealthMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.240] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Guardian.EnderGuardianDamageMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.240] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Guardian.EnderGuardianDamageCap was corrected from null to its default, 22.0. 
+[26ago.2025 05:37:24.240] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Guardian.EnderGuardianDamageTime was corrected from null to its default, 30. 
+[26ago.2025 05:37:24.240] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Guardian.EnderGuardianNatureHealing was corrected from null to its default, 10.0. 
+[26ago.2025 05:37:24.240] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Guardian.EnderguardianBlockBreaking was corrected from null to its default, true. 
+[26ago.2025 05:37:24.240] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Guardian.Guardian's prevent attacks from far away Range was corrected from null to its default, 12.0. 
+[26ago.2025 05:37:24.240] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Guardian.Guardian's gravity Punch Hp Damage was corrected from null to its default, 0.05. 
+[26ago.2025 05:37:24.240] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Guardian.Guardian's Teleport attack Hp Damage was corrected from null to its default, 0.05. 
+[26ago.2025 05:37:24.240] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Guardian.Guardian's knockback Hp Damage was corrected from null to its default, 0.06. 
+[26ago.2025 05:37:24.240] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Guardian.Guardian's Uppercut Hp Damage was corrected from null to its default, 0.1. 
+[26ago.2025 05:37:24.240] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Guardian.Guardian's RocketPunch Hp Damage was corrected from null to its default, 0.1. 
+[26ago.2025 05:37:24.241] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Guardian.Guardian's area attack Hp Damage was corrected from null to its default, 0.08. 
+[26ago.2025 05:37:24.241] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Guardian.EnderGuardianBlockBreaking X was corrected from null to its default, 15. 
+[26ago.2025 05:37:24.241] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Guardian.EnderGuardianBlockBreaking Y was corrected from null to its default, 2. 
+[26ago.2025 05:37:24.241] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Guardian.EnderGuardianBlockBreaking Z was corrected from null to its default, 15. 
+[26ago.2025 05:37:24.241] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Netherite Monstrosity was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.241] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Netherite Monstrosity.LavabombMagazine was corrected from null to its default, 3. 
+[26ago.2025 05:37:24.242] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Netherite Monstrosity.Lavabombamount was corrected from null to its default, 3. 
+[26ago.2025 05:37:24.242] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Netherite Monstrosity.LavaBombDuration was corrected from null to its default, 350. 
+[26ago.2025 05:37:24.242] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Netherite Monstrosity.LavaBombRandomDuration was corrected from null to its default, 150. 
+[26ago.2025 05:37:24.242] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Netherite Monstrosity.MonstrosityHealthMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.242] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Netherite Monstrosity.MonstrosityDamageMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.242] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Netherite Monstrosity.MonstrosityHealingMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.242] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Netherite Monstrosity.MonstrosityNatureHealing was corrected from null to its default, 10.0. 
+[26ago.2025 05:37:24.242] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Netherite Monstrosity.MonstrosityDamageCap was corrected from null to its default, 22.0. 
+[26ago.2025 05:37:24.242] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Netherite Monstrosity.MonstrosityDamageTime was corrected from null to its default, 10. 
+[26ago.2025 05:37:24.242] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Netherite Monstrosity.NetheritemonstrosityBodyBloking was corrected from null to its default, true. 
+[26ago.2025 05:37:24.242] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Netherite Monstrosity.Monstrosity's attack Hp Damage was corrected from null to its default, 0.08. 
+[26ago.2025 05:37:24.242] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Netherite Monstrosity.Monstrosity's prevent attacks from far away Range was corrected from null to its default, 18.0. 
+[26ago.2025 05:37:24.242] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Netherite Monstrosity.monstrosityBlockBreaking was corrected from null to its default, true. 
+[26ago.2025 05:37:24.243] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Golem was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.243] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Golem.EndergolemBlockBreaking was corrected from null to its default, false. 
+[26ago.2025 05:37:24.243] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Golem.Endergolem's prevent attacks from far away Range was corrected from null to its default, 6.0. 
+[26ago.2025 05:37:24.243] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Golem.GolemHealthMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.243] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ender Golem.GolemDamageMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.244] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ignis was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.244] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ignis.IgnisHealthMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.244] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ignis.IgnisDamageMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.244] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ignis.IgnisNatureHealing was corrected from null to its default, 10.0. 
+[26ago.2025 05:37:24.244] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ignis.IgnisHealingMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.244] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ignis.Ignis's prevent attacks from far away Range was corrected from null to its default, 15.0. 
+[26ago.2025 05:37:24.244] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ignis.IgnisDamageCap was corrected from null to its default, 20.0. 
+[26ago.2025 05:37:24.244] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ignis.IgnisDamageTime was corrected from null to its default, 15. 
+[26ago.2025 05:37:24.244] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ignis.IgnisBlockBreaking was corrected from null to its default, true. 
+[26ago.2025 05:37:24.245] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key revenant was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.245] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key revenant.RevenantHealthMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.245] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key revenant.RevenantDamageMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.247] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Prowler was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.247] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Prowler.The Prowler's prevent attacks from far away Range was corrected from null to its default, 16.0. 
+[26ago.2025 05:37:24.247] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Prowler.ProwlerHealthMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.247] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Prowler.ProwlerDamageMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.248] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Harbinger was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.248] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Harbinger.HarbingerHealthMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.248] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Harbinger.HarbingerDamageMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.248] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Harbinger.HarbingerHealingMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.248] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Harbinger.Harbinger's WitherMissiledamage was corrected from null to its default, 8.0. 
+[26ago.2025 05:37:24.248] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Harbinger.Harbinger's laser damage was corrected from null to its default, 5.0. 
+[26ago.2025 05:37:24.248] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Harbinger.The Harbinger's prevent attacks from far away Range was corrected from null to its default, 35.0. 
+[26ago.2025 05:37:24.248] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Harbinger.The Harbinger DamageCap was corrected from null to its default, 22.0. 
+[26ago.2025 05:37:24.248] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Harbinger.The Harbinger DamageTime was corrected from null to its default, 12. 
+[26ago.2025 05:37:24.248] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Harbinger.The Harbinger Light A Fire was corrected from null to its default, true. 
+[26ago.2025 05:37:24.248] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Harbinger.The Harbinger's charge attack Hp Damage was corrected from null to its default, 0.06. 
+[26ago.2025 05:37:24.249] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Leviathan was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.249] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Leviathan.LeviathanHealthMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.249] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Leviathan.LeviathanDamageMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.249] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Leviathan.LeviathanNatureHealing was corrected from null to its default, 10.0. 
+[26ago.2025 05:37:24.249] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Leviathan.Leviathan's prevent attacks from far away Range was corrected from null to its default, 38.0. 
+[26ago.2025 05:37:24.249] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Leviathan.Leviathan's Bite Hp Damage was corrected from null to its default, 0.1. 
+[26ago.2025 05:37:24.249] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Leviathan.Leviathan's Rush Hp Damage was corrected from null to its default, 0.05. 
+[26ago.2025 05:37:24.249] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Leviathan.Leviathan's TailSwing Hp Damage was corrected from null to its default, 0.08. 
+[26ago.2025 05:37:24.249] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Leviathan.Leviathan's Tentacle Hp Damage was corrected from null to its default, 0.03. 
+[26ago.2025 05:37:24.249] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Leviathan.LeviathanDamageCap was corrected from null to its default, 20.0. 
+[26ago.2025 05:37:24.249] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Leviathan.Leviathan DamageTime was corrected from null to its default, 15. 
+[26ago.2025 05:37:24.249] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Leviathan.LeviathanBlockBreaking was corrected from null to its default, true. 
+[26ago.2025 05:37:24.249] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Leviathan.LeviathanImmuneOutofWater was corrected from null to its default, true. 
+[26ago.2025 05:37:24.250] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Baby Leviathan was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.250] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Baby Leviathan.BabyLeviathanHealthMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.250] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key The Baby Leviathan.BabyLeviathanDamageMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.251] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Modern Remnant was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.251] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Modern Remnant.ModernRemnantHealthMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.251] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Modern Remnant.ModernRemnantDamageMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.252] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Netherite Ministrosity was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.252] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Netherite Ministrosity.MinistrosityHealthMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.253] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Amethyst Crab was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.253] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Amethyst Crab.AmethystCrabHealthMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.253] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Amethyst Crab.AmethystCrabEarthQuakeDamage was corrected from null to its default, 5.0. 
+[26ago.2025 05:37:24.253] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Amethyst Crab.AmethystCrabDamageMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.254] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ancient Remnant was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.254] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ancient Remnant.AncientRemnantHealthMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.254] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ancient Remnant.AncientRemnantDamageMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.254] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ancient Remnant.AncientRemnantNatureHealing was corrected from null to its default, 10.0. 
+[26ago.2025 05:37:24.254] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ancient Remnant.Ancient Remnant's prevent attacks from far away Range was corrected from null to its default, 14.0. 
+[26ago.2025 05:37:24.254] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ancient Remnant.AncientRemnantCap was corrected from null to its default, 21.0. 
+[26ago.2025 05:37:24.254] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ancient Remnant.Ancient Remnant DamageTime was corrected from null to its default, 12. 
+[26ago.2025 05:37:24.255] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ancient Remnant.AncientRemnantBlockBreaking was corrected from null to its default, true. 
+[26ago.2025 05:37:24.255] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ancient Remnant.Remnant's Charge Hp Damage was corrected from null to its default, 0.1. 
+[26ago.2025 05:37:24.255] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ancient Remnant.Remnant's Normal attack Hp Damage was corrected from null to its default, 0.05. 
+[26ago.2025 05:37:24.255] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ancient Remnant.Remnant's Stomp Hp Damage was corrected from null to its default, 0.03. 
+[26ago.2025 05:37:24.255] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Ancient Remnant.Remnant's EarthQuakeDamage was corrected from null to its default, 11.0. 
+[26ago.2025 05:37:24.281] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Koboleton was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.281] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Koboleton.CauseKoboletontoDropItemInHandPercent was corrected from null to its default, 5.0. 
+[26ago.2025 05:37:24.283] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Kobolediator was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.283] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Kobolediator.KobolediatorBlockBreaking was corrected from null to its default, false. 
+[26ago.2025 05:37:24.283] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Kobolediator.KobolediatorHealthMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.283] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Kobolediator.KobolediatorDamageMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.284] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Wadjet was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.284] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Wadjet.WadjetHealthMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.284] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Wadjet.WadjetDamageMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.285] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Aptrgangr was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.285] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Aptrgangr.AptrgangrHealthMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.285] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Aptrgangr.AptrgangrDamageMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.285] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Aptrgangr.AptrgangrAxeBladeDamage was corrected from null to its default, 8.0. 
+[26ago.2025 05:37:24.287] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Maledictus was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.287] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Maledictus.MaledictusHealthMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.287] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Maledictus.MaledictusDamageMultiplier was corrected from null to its default, 1.0. 
+[26ago.2025 05:37:24.287] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Maledictus.Maledictus's prevent attacks from far away Range was corrected from null to its default, 12.0. 
+[26ago.2025 05:37:24.287] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Maledictus.MaledictusNatureHealing was corrected from null to its default, 10.0. 
+[26ago.2025 05:37:24.287] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Maledictus.Maledictus' Phantom Halberd Damage' was corrected from null to its default, 13.0. 
+[26ago.2025 05:37:24.287] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Maledictus.MaledictusDamageCap was corrected from null to its default, 20.0. 
+[26ago.2025 05:37:24.288] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Maledictus.Maledictus DamageTime was corrected from null to its default, 30. 
+[26ago.2025 05:37:24.288] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Maledictus.Maledictus's melee Hp Damage was corrected from null to its default, 0.05. 
+[26ago.2025 05:37:24.288] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Maledictus.Maledictus's Shock Wave Hp Damage was corrected from null to its default, 0.03. 
+[26ago.2025 05:37:24.288] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Maledictus.Maledictus's AOE Hp Damage was corrected from null to its default, 0.15. 
+[26ago.2025 05:37:24.288] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Maledictus.Maledictus's Flying Smash Hp Damage was corrected from null to its default, 0.1. 
+[26ago.2025 05:37:24.288] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Maledictus.Maledictus's Jump Smash Hp Damage was corrected from null to its default, 0.08. 
+[26ago.2025 05:37:24.288] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Maledictus.Maledictus's Phantom Arrow Damage was corrected from null to its default, 5.0. 
+[26ago.2025 05:37:24.288] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key Maledictus.MaledictusBlockBreaking was corrected from null to its default, true. 
+[26ago.2025 05:37:24.298] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key spawning was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.298] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key spawning.DeeplingSpawnWeight was corrected from null to its default, 2. 
+[26ago.2025 05:37:24.298] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key spawning.DeeplingSpawnRolls was corrected from null to its default, 30. 
+[26ago.2025 05:37:24.299] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key spawning.DeeplingBruteSpawnWeight was corrected from null to its default, 1. 
+[26ago.2025 05:37:24.299] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key spawning.DeeplingBruteSpawnRolls was corrected from null to its default, 50. 
+[26ago.2025 05:37:24.299] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key spawning.DeeplingAnglerSpawnWeight was corrected from null to its default, 2. 
+[26ago.2025 05:37:24.299] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key spawning.DeeplingAnglerSpawnRolls was corrected from null to its default, 30. 
+[26ago.2025 05:37:24.299] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key spawning.DeeplingPriestSpawnWeight was corrected from null to its default, 1. 
+[26ago.2025 05:37:24.299] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key spawning.DeeplingPriestSpawnRolls was corrected from null to its default, 70. 
+[26ago.2025 05:37:24.299] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key spawning.DeeplingWarlockSpawnWeight was corrected from null to its default, 1. 
+[26ago.2025 05:37:24.299] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key spawning.DeeplingWarlockSpawnRolls was corrected from null to its default, 70. 
+[26ago.2025 05:37:24.299] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key spawning.CoralgolemSpawnWeight was corrected from null to its default, 1. 
+[26ago.2025 05:37:24.299] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key spawning.CoralgolemSpawnRolls was corrected from null to its default, 70. 
+[26ago.2025 05:37:24.299] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key spawning.AmethystCrabSpawnWeight was corrected from null to its default, 1. 
+[26ago.2025 05:37:24.299] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key spawning.AmethystCrabSpawnRolls was corrected from null to its default, 20. 
+[26ago.2025 05:37:24.299] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key spawning.KoboletonSpawnWeight was corrected from null to its default, 15. 
+[26ago.2025 05:37:24.299] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key spawning.KoboletonSpawnRolls was corrected from null to its default, 1. 
+[26ago.2025 05:37:24.299] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key spawning.IgnitedBerserkerSpawnWeight was corrected from null to its default, 5. 
+[26ago.2025 05:37:24.299] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key spawning.IgnitedBerserkerSpawnRolls was corrected from null to its default, 2. 
+[26ago.2025 05:37:24.301] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key World Generation was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.301] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key World Generation.cursedPyramidCheckRange was corrected from null to its default, 2. 
+[26ago.2025 05:37:24.301] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key World Generation.cursedPyramidHeightVariance was corrected from null to its default, 2. 
+[26ago.2025 05:37:24.531] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file E:\Documents\GitHub\RPG-Stats\run\config\curios-common.toml is not correct. Correcting
+[26ago.2025 05:37:24.532] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key slots was corrected from null to its default, []. 
+[26ago.2025 05:37:24.533] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file E:\Documents\GitHub\RPG-Stats\run\config\pehkui-common.toml is not correct. Correcting
+[26ago.2025 05:37:24.534] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key general was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.534] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key general.scaledFallDamage was corrected from null to its default, true. 
+[26ago.2025 05:37:24.534] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key general.scaledMotion was corrected from null to its default, true. 
+[26ago.2025 05:37:24.534] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key general.scaledReach was corrected from null to its default, true. 
+[26ago.2025 05:37:24.534] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key general.scaledAttack was corrected from null to its default, true. 
+[26ago.2025 05:37:24.534] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key general.scaledDefense was corrected from null to its default, true. 
+[26ago.2025 05:37:24.534] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key general.scaledHealth was corrected from null to its default, true. 
+[26ago.2025 05:37:24.534] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key general.scaledItemDrops was corrected from null to its default, true. 
+[26ago.2025 05:37:24.534] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key general.scaledProjectiles was corrected from null to its default, true. 
+[26ago.2025 05:37:24.534] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key general.scaledExplosions was corrected from null to its default, true. 
+[26ago.2025 05:37:24.534] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key general.keepAllScalesOnRespawn was corrected from null to its default, false. 
+[26ago.2025 05:37:24.534] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key general.accurateNetherPortals was corrected from null to its default, true. 
+[26ago.2025 05:37:24.534] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key general.scalesKeptOnRespawn was corrected from null to its default, []. 
+[26ago.2025 05:37:24.534] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key general.enableCommands was corrected from null to its default, true. 
+[26ago.2025 05:37:24.534] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key general.enableDebugCommands was corrected from null to its default, false. 
+[26ago.2025 05:37:24.537] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file E:\Documents\GitHub\RPG-Stats\run\config\rpgstats-common.toml is not correct. Correcting
+[26ago.2025 05:37:24.537] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.537] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Formula was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.537] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Formula.pointsMultiplier was corrected from null to its default, 0.3. 
+[26ago.2025 05:37:24.537] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Formula.counterVariation was corrected from null to its default, 0.005. 
+[26ago.2025 05:37:24.537] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Formula.dividerExponent was corrected from null to its default, 1.5. 
+[26ago.2025 05:37:24.537] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Strength was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.537] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Strength.attackDamageDivider was corrected from null to its default, 30.0. 
+[26ago.2025 05:37:24.537] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Strength.impactDivider was corrected from null to its default, 120.0. 
+[26ago.2025 05:37:24.538] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Strength.armorNegationDivider was corrected from null to its default, 8.0. 
+[26ago.2025 05:37:24.538] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Strength.swimSpeedDivider was corrected from null to its default, 2000.0. 
+[26ago.2025 05:37:24.538] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Strength.attackSpeedDivider was corrected from null to its default, 500.0. 
+[26ago.2025 05:37:24.538] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Strength.attackKnockbackDivider was corrected from null to its default, 600.0. 
+[26ago.2025 05:37:24.538] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Dexterity was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.538] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Dexterity.movementSpeedDivider was corrected from null to its default, 8000.0. 
+[26ago.2025 05:37:24.538] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Dexterity.armorNegationDivider was corrected from null to its default, 8.0. 
+[26ago.2025 05:37:24.538] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Dexterity.staminaDivider was corrected from null to its default, 7.0. 
+[26ago.2025 05:37:24.538] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Dexterity.staminaRegenDivider was corrected from null to its default, 500.0. 
+[26ago.2025 05:37:24.538] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Dexterity.swimSpeedDivider was corrected from null to its default, 600.0. 
+[26ago.2025 05:37:24.539] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Dexterity.attackSpeedDivider was corrected from null to its default, 1000.0. 
+[26ago.2025 05:37:24.539] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Vitality was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.539] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Vitality.maxHealthDivider was corrected from null to its default, 8.0. 
+[26ago.2025 05:37:24.539] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Vitality.staminaRegenDivider was corrected from null to its default, 500.0. 
+[26ago.2025 05:37:24.539] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Vitality.armorDivider was corrected from null to its default, 35.0. 
+[26ago.2025 05:37:24.539] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Vitality.staminaDivider was corrected from null to its default, 15.0. 
+[26ago.2025 05:37:24.539] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Vitality.weightReductionDivider was corrected from null to its default, 800.0. 
+[26ago.2025 05:37:24.539] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Constitution was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.539] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Constitution.maxHealthDivider was corrected from null to its default, 40.0. 
+[26ago.2025 05:37:24.539] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Constitution.armorDivider was corrected from null to its default, 10.0. 
+[26ago.2025 05:37:24.539] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Constitution.stunArmorDivider was corrected from null to its default, 25.0. 
+[26ago.2025 05:37:24.540] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Constitution.impactDivider was corrected from null to its default, 120.0. 
+[26ago.2025 05:37:24.540] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Constitution.knockbackResistanceDivider was corrected from null to its default, 100.0. 
+[26ago.2025 05:37:24.540] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Constitution.weightReductionDivider was corrected from null to its default, 800.0. 
+[26ago.2025 05:37:24.541] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Constitution.attackKnockbackDivider was corrected from null to its default, 300.0. 
+[26ago.2025 05:37:24.541] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key RPG Stats.Constitution.armorToughnessDivider was corrected from null to its default, 75.0. 
+[26ago.2025 05:37:24.543] [modloading-worker-0/INFO] [net.iaxsro.rpgstats.RpgStatsMod/]: Cargando configuración para rpgstats: rpgstats-common.toml
+[26ago.2025 05:37:24.545] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Configuration file E:\Documents\GitHub\RPG-Stats\run\config\epicfight-common.toml is not correct. Correcting
+[26ago.2025 05:37:24.546] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key loot was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.546] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key loot.skill_book_mob_drop_chance_modifier was corrected from null to its default, 0. 
+[26ago.2025 05:37:24.546] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key loot.skill_book_chest_drop_chance_modifier was corrected from null to its default, 0. 
+[26ago.2025 05:37:24.546] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key default_gamerule was corrected from null to its default, SimpleCommentedConfig:{}. 
+[26ago.2025 05:37:24.547] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key default_gamerule.globalStun was corrected from null to its default, true. 
+[26ago.2025 05:37:24.547] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key default_gamerule.keepSkills was corrected from null to its default, true. 
+[26ago.2025 05:37:24.547] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key default_gamerule.hasFallAnimation was corrected from null to its default, true. 
+[26ago.2025 05:37:24.547] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key default_gamerule.disapleEntityUI was corrected from null to its default, false. 
+[26ago.2025 05:37:24.547] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key default_gamerule.canSwitchPlayerMode was corrected from null to its default, false. 
+[26ago.2025 05:37:24.547] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key default_gamerule.stiffComboAttacks was corrected from null to its default, true. 
+[26ago.2025 05:37:24.547] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key default_gamerule.noMobsInBossfight was corrected from null to its default, true. 
+[26ago.2025 05:37:24.547] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key default_gamerule.initialMode was corrected from null to its default, 1. 
+[26ago.2025 05:37:24.547] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key default_gamerule.weightPenalty was corrected from null to its default, 100. 
+[26ago.2025 05:37:24.547] [modloading-worker-0/WARN] [net.minecraftforge.common.ForgeConfigSpec/CORE]: Incorrect key default_gamerule.epicDrop was corrected from null to its default, false. 
+[26ago.2025 05:37:24.552] [Worker-Main-5/INFO] [net.iaxsro.rpgstats.RpgStatsMod/]: Iniciando Common Setup para rpgstats
+[26ago.2025 05:37:24.553] [Worker-Main-5/INFO] [net.iaxsro.rpgstats.RpgStatsMod/]: MOD BUS EVENT: FMLCommonSetupEvent
+[26ago.2025 05:37:24.563] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[26ago.2025 05:37:24.738] [Render thread/INFO] [net.iaxsro.rpgstats.RpgStatsMod/]: Registrando paquetes de red para rpgstats
+[26ago.2025 05:37:24.742] [Render thread/INFO] [net.iaxsro.rpgstats.RpgStatsMod/]: Paquetes de red registrados.
+[26ago.2025 05:37:24.742] [Render thread/INFO] [net.iaxsro.rpgstats.RpgStatsMod/]: Network Handler registrado.
+[26ago.2025 05:37:24.742] [Render thread/INFO] [net.iaxsro.rpgstats.RpgStatsMod/]: Registrando paquetes de red para rpgstats
+[26ago.2025 05:37:24.742] [Render thread/INFO] [net.iaxsro.rpgstats.RpgStatsMod/]: Paquetes de red registrados.
+[26ago.2025 05:37:25.070] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 47.4.0 Target: null
+[26ago.2025 05:37:25.392] [Worker-Main-3/WARN] [net.minecraft.client.resources.model.ModelManager/]: Missing textures in model cataclysm:coral_chunk#inventory:
+    minecraft:textures/atlas/blocks.png:cataclysm:item/coral_chunk_1
+[26ago.2025 05:37:25.448] [Render thread/INFO] [net.iaxsro.rpgstats.client.ClientSetup/]: Ejecutando configuración del cliente...
+[26ago.2025 05:37:25.448] [Render thread/INFO] [net.iaxsro.rpgstats.client.ClientSetup/]: Configuración del cliente completada exitosamente
+[26ago.2025 05:37:26.287] [modloading-worker-0/INFO] [epicfight/]: Data keys [epicfight:basic_attack_active, epicfight:combo_counter] for epicfight:basic_attack
+[26ago.2025 05:37:26.287] [modloading-worker-0/INFO] [epicfight/]: Data keys [epicfight:penalty_restore_counter, epicfight:penalty] for epicfight:guard
+[26ago.2025 05:37:26.287] [modloading-worker-0/INFO] [epicfight/]: Data keys [epicfight:last_active, epicfight:penalty_restore_counter, epicfight:parry_motion_counter, epicfight:penalty] for epicfight:parrying
+[26ago.2025 05:37:26.287] [modloading-worker-0/INFO] [epicfight/]: Data keys [epicfight:penalty_restore_counter, epicfight:penalty] for epicfight:impact_guard
+[26ago.2025 05:37:26.287] [modloading-worker-0/INFO] [epicfight/]: Data keys [epicfight:resisting_damage_type, epicfight:tick_record, epicfight:stacks] for epicfight:adaptive_skin
+[26ago.2025 05:37:26.287] [modloading-worker-0/INFO] [epicfight/]: Data keys [epicfight:tick_record] for epicfight:adrenaline_fiend
+[26ago.2025 05:37:26.288] [modloading-worker-0/INFO] [epicfight/]: Data keys [epicfight:entity_id, epicfight:stacks] for epicfight:bonebreaker
+[26ago.2025 05:37:26.288] [modloading-worker-0/INFO] [epicfight/]: Data keys [epicfight:tick_record, epicfight:entity_id] for epicfight:vengeance
+[26ago.2025 05:37:26.288] [modloading-worker-0/INFO] [epicfight/]: Data keys [epicfight:fall_distance, epicfight:slam_protect_next_fall] for epicfight:meteor_slam
+[26ago.2025 05:37:26.288] [modloading-worker-0/INFO] [epicfight/]: Data keys [epicfight:stacks] for epicfight:revelation
+[26ago.2025 05:37:26.288] [modloading-worker-0/INFO] [epicfight/]: Data keys [epicfight:slam_protect_next_fall] for epicfight:demolition_leap
+[26ago.2025 05:37:26.288] [modloading-worker-0/INFO] [epicfight/]: Data keys [epicfight:jump_key_pressed_last_tick, epicfight:jump_count, epicfight:slam_protect_next_fall] for epicfight:phantom_ascent
+[26ago.2025 05:37:26.288] [modloading-worker-0/INFO] [epicfight/]: Data keys [epicfight:last_hit_count] for epicfight:grasping_spire
+[26ago.2025 05:37:26.288] [modloading-worker-0/INFO] [epicfight/]: Data keys [epicfight:sheath] for epicfight:battojutsu_passive
+[26ago.2025 05:37:26.288] [modloading-worker-0/INFO] [epicfight/]: Data keys [epicfight:sheath] for epicfight:battojutsu
+[26ago.2025 05:37:26.288] [modloading-worker-0/INFO] [epicfight/]: Data keys [epicfight:combo_counter] for epicfight:blade_rush
+[26ago.2025 05:37:26.288] [modloading-worker-0/INFO] [epicfight/]: Data keys [epicfight:thrown_trident_entity_id] for epicfight:everlasting_allegiance
+[26ago.2025 05:37:26.330] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[26ago.2025 05:37:26.330] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[26ago.2025 05:37:26.331] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: cataclysm:ignisshieldbreak
+[26ago.2025 05:37:26.352] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Auriculares (A50 X Game)
+[26ago.2025 05:37:26.353] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[26ago.2025 05:37:26.424] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[26ago.2025 05:37:26.431] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[26ago.2025 05:37:26.434] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[26ago.2025 05:37:26.434] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[26ago.2025 05:37:26.435] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[26ago.2025 05:37:26.436] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[26ago.2025 05:37:26.438] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[26ago.2025 05:37:26.438] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[26ago.2025 05:37:26.439] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[26ago.2025 05:37:26.535] [Render thread/ERROR] [epicfight/]: Can't load layer file minecraft:animated_layers/player/waveycapes.json for entity.minecraft.player: dev.tr7zw.waveycapes.renderlayers.CustomCapeRenderLayer (This is develop-only message and neglectable if the resource is not belong to you)
+[26ago.2025 05:37:26.537] [Render thread/ERROR] [epicfight/]: Can't load layer file minecraft:animated_layers/player/waveycapes.json for entity.minecraft.player: dev.tr7zw.waveycapes.renderlayers.CustomCapeRenderLayer (This is develop-only message and neglectable if the resource is not belong to you)
+[26ago.2025 05:37:26.547] [Render thread/ERROR] [epicfight/]: Can't load layer file minecraft:animated_layers/player/waveycapes.json for entity.minecraft.player: dev.tr7zw.waveycapes.renderlayers.CustomCapeRenderLayer (This is develop-only message and neglectable if the resource is not belong to you)
+[26ago.2025 05:37:26.600] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[26ago.2025 05:37:26.660] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x0 minecraft:textures/atlas/particles.png-atlas
+[26ago.2025 05:37:26.666] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[26ago.2025 05:37:26.666] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[26ago.2025 05:37:27.126] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 jei:textures/atlas/gui.png-atlas
+[26ago.2025 05:37:37.141] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
+[26ago.2025 05:38:03.782] [Render thread/INFO] [net.iaxsro.rpgstats.RpgStatsMod/]: Comando /rpgstats registrado.
+[26ago.2025 05:38:04.239] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 9 recipes
+[26ago.2025 05:38:04.340] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1288 advancements
+[26ago.2025 05:38:04.346] [Render thread/INFO] [top.theillusivec4.curios.Curios/]: Loaded 11 curio slots
+[26ago.2025 05:38:04.347] [Render thread/INFO] [top.theillusivec4.curios.Curios/]: Loaded 1 curio entities
+[26ago.2025 05:38:06.439] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
