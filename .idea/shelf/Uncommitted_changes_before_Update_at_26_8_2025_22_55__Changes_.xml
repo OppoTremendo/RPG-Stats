@@ -1,0 +1,215 @@
+<changelist name="Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]" date="1756259725677" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 26/8/2025 22:55 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.8/fileHashes/fileHashes.bin" />
+    <option name="AFTER_PATH" value=".gradle/8.8/fileHashes/fileHashes.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/fileHashes.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.8/fileHashes/fileHashes.lock" />
+    <option name="AFTER_PATH" value=".gradle/8.8/fileHashes/fileHashes.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/fileHashes.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/mixin/DodgeSkillMixin.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/network/ClientboundSyncPlayerStatsPacket.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/network/ClientboundSyncPlayerStatsPacket.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/ClientboundSyncPlayerStatsPacket.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/client/event/ClientAttributeEvents.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/client/event/ClientAttributeEvents.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/ClientAttributeEvents.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/client/gui/AttributeValuesOverlay.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/client/gui/AttributeValuesOverlay.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/AttributeValuesOverlay.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/capabilities/util/CapabilitiesAccessor.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/capabilities/util/CapabilitiesAccessor.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/CapabilitiesAccessor.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/event/PlayerUpdateEvents.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/event/PlayerUpdateEvents.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/PlayerUpdateEvents.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/tmp/compileJava/compileJava-mappings.tsrg" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/system/PersistenceService.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/system/PersistenceService.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/PersistenceService.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.8/checksums/sha1-checksums.bin" />
+    <option name="AFTER_PATH" value=".gradle/8.8/checksums/sha1-checksums.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/sha1-checksums.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/client/gui/AttributePointsOverlay.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/client/gui/AttributePointsOverlay.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/AttributePointsOverlay.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/capabilities/PlayerStats.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/capabilities/PlayerStats.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/PlayerStats.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/client/gui/ModifiedAttributesOverlay.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/client/gui/ModifiedAttributesOverlay.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/ModifiedAttributesOverlay.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/client/event/ClientDataEvents.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/client/event/ClientDataEvents.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/ClientDataEvents.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/capabilities/util/CapabilitiesAccessor$StatAccessor.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/capabilities/util/CapabilitiesAccessor$StatAccessor.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/CapabilitiesAccessor$StatAccessor.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/event/ModBusEvents.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/event/ModBusEvents.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/ModBusEvents.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/item/AttributePointGrantItem.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/item/AttributePointGrantItem.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/AttributePointGrantItem.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/system/AttributeFormulas.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/system/AttributeFormulas.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/AttributeFormulas.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/util/ChatUtil.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/util/ChatUtil.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/ChatUtil.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/system/PersistenceService$LevelSaveData.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/system/PersistenceService$LevelSaveData.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/PersistenceService$LevelSaveData.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/client/gui/SimpleTestOverlay.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/client/gui/SimpleTestOverlay.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/SimpleTestOverlay.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.8/executionHistory/executionHistory.lock" />
+    <option name="AFTER_PATH" value=".gradle/8.8/executionHistory/executionHistory.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/executionHistory.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/event/CapabilityEvents.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/event/CapabilityEvents.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/CapabilityEvents.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/system/AttributeCalculator$CalculatedBonuses.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/system/AttributeCalculator$CalculatedBonuses.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/AttributeCalculator$CalculatedBonuses.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/RpgStatsMod.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/RpgStatsMod.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/RpgStatsMod.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/registry/CreativeTabRegistry.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/registry/CreativeTabRegistry.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/CreativeTabRegistry.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.8/fileHashes/resourceHashesCache.bin" />
+    <option name="AFTER_PATH" value=".gradle/8.8/fileHashes/resourceHashesCache.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/resourceHashesCache.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/system/AttributeCalculator.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/system/AttributeCalculator.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/AttributeCalculator.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/file-system.probe" />
+    <option name="AFTER_PATH" value=".gradle/file-system.probe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/file-system.probe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.8/executionHistory/executionHistory.bin" />
+    <option name="AFTER_PATH" value=".gradle/8.8/executionHistory/executionHistory.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/executionHistory.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/system/PlayerDataHandler.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/system/PlayerDataHandler.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/PlayerDataHandler.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.8/checksums/checksums.lock" />
+    <option name="AFTER_PATH" value=".gradle/8.8/checksums/checksums.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/checksums.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/event/PlayerLifecycleEvents.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/event/PlayerLifecycleEvents.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/PlayerLifecycleEvents.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/tmp/compileJava/previous-compilation-data.bin" />
+    <option name="AFTER_PATH" value="build/tmp/compileJava/previous-compilation-data.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/previous-compilation-data.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/event/CapabilityEvents$ForgeEvents.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/event/CapabilityEvents$ForgeEvents.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/CapabilityEvents$ForgeEvents.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.8/checksums/md5-checksums.bin" />
+    <option name="AFTER_PATH" value=".gradle/8.8/checksums/md5-checksums.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/md5-checksums.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/attributesystem/InitiateSystem.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/attributesystem/InitiateSystem.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/InitiateSystem.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/util/AttributeUtil.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/util/AttributeUtil.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/AttributeUtil.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/attributesystem/Calculator.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/attributesystem/Calculator.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/Calculator.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <option name="AFTER_PATH" value=".gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/buildOutputCleanup.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/client/ClientSetup.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/client/ClientSetup.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/ClientSetup.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/system/LevelingManager.class" />
+    <option name="AFTER_PATH" value="build/classes/java/main/net/iaxsro/rpgstats/system/LevelingManager.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_8_2025_22_55_[Changes]/LevelingManager.class" />
+  </binary>
+</changelist>
