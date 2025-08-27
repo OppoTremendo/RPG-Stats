@@ -1,7 +1,6 @@
 package net.iaxsro.rpgstats.command;
 
 import com.mojang.brigadier.CommandDispatcher;
-import com.mojang.brigadier.arguments.IntegerArgumentType;
 import net.iaxsro.rpgstats.RpgStatsMod;
 import net.iaxsro.rpgstats.capabilities.IPlayerStats;
 import net.iaxsro.rpgstats.capabilities.PlayerStats;
@@ -81,20 +80,6 @@ public class StatsCommand {
                                         ))
                                 )
                         ) // Fin resetpoints
-
-                        // --- Subcomando: leveldown ---
-                        .then(Commands.literal("leveldown")
-                                // Ahora requiere especificar target y nivel obligatoriamente
-                                .then(Commands.argument("target", EntityArgument.player())
-                                        .then(Commands.argument("level", IntegerArgumentType.integer(0)) // Nivel >= 0
-                                                .executes(context -> executeLevelDown(
-                                                        context.getSource(),
-                                                        EntityArgument.getPlayer(context, "target"),
-                                                        IntegerArgumentType.getInteger(context, "level")
-                                                ))
-                                        )
-                                )
-                        ) // Fin leveldown
 
         ); // Fin register
         LOGGER.info("Comando /rpgstats registrado.");
@@ -245,17 +230,4 @@ public class StatsCommand {
         return finalCount;
     }
 
-    private static int executeLevelDown(CommandSourceStack source, ServerPlayer target, int targetLevel) {
-        // Pasar 'source' a LevelingManager para que pueda enviar feedback de error directamente
-        boolean success = LevelingManager.revertToLevel(source, target, targetLevel);
-
-        if (success) {
-            source.sendSuccess(() -> Component.translatable("command.rpgstats.leveldown.success", target.getName().getString(), targetLevel), true);
-            return 1;
-        } else {
-            // El mensaje de error específico ya fue enviado desde LevelingManager
-            LOGGER.warn("Falló la operación de revertir nivel para {} a nivel {}.", target.getName().getString(), targetLevel);
-            return 0;
-        }
-    }
 }
