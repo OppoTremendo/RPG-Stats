@@ -4,9 +4,11 @@ import net.iaxsro.rpgstats.RpgStatsMod;
 import net.iaxsro.rpgstats.capabilities.PlayerStats;
 import net.iaxsro.rpgstats.network.ClientboundSyncPlayerStatsPacket;
 import net.iaxsro.rpgstats.network.PacketHandler;
-import net.iaxsro.rpgstats.system.AttributeCalculator;
+import net.iaxsro.rpgstats.registry.AttributeRegistry;
 import net.iaxsro.rpgstats.system.LevelingManager;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -35,6 +37,45 @@ public class PlayerLifecycleEvents {
     }
 
     /**
+     * Se dispara cuando un jugador es clonado (generalmente al morir y respawnear).
+     * Copia los datos de la capacidad y los atributos base personalizados al nuevo jugador.
+     */
+    @SubscribeEvent
+    public static void onPlayerClone(final PlayerEvent.Clone event) {
+        if (!event.isWasDeath()) {
+            return; // Solo nos interesa cuando el jugador murió
+        }
+
+        Player original = event.getOriginal();
+        Player clone = event.getEntity();
+
+        // Asegurarnos de que las capacidades originales estén accesibles
+        original.reviveCaps();
+        original.getCapability(PlayerStats.PLAYER_STATS_CAPABILITY).ifPresent(oldStats -> {
+            clone.getCapability(PlayerStats.PLAYER_STATS_CAPABILITY).ifPresent(newStats -> {
+                newStats.readNBT(oldStats.writeNBT());
+            });
+        });
+
+        // Copiar valores base de los atributos personalizados registrados por el mod
+        copyBaseAttribute(original, clone, AttributeRegistry.STRENGTH.get());
+        copyBaseAttribute(original, clone, AttributeRegistry.DEXTERITY.get());
+        copyBaseAttribute(original, clone, AttributeRegistry.VITALITY.get());
+        copyBaseAttribute(original, clone, AttributeRegistry.CONSTITUTION.get());
+        copyBaseAttribute(original, clone, AttributeRegistry.INTELLIGENCE.get());
+
+        original.invalidateCaps(); // Evitar fugas de memoria
+    }
+
+    private static void copyBaseAttribute(Player from, Player to, Attribute attribute) {
+        AttributeInstance fromInst = from.getAttribute(attribute);
+        AttributeInstance toInst = to.getAttribute(attribute);
+        if (fromInst != null && toInst != null) {
+            toInst.setBaseValue(fromInst.getBaseValue());
+        }
+    }
+
+    /**
      * Se dispara cuando un jugador reaparece (después de morir).
      * Sincroniza la capacidad al cliente y aplica lógica post-respawn.
      */
@@ -47,18 +88,8 @@ public class PlayerLifecycleEvents {
         LOGGER.debug("Jugador {} reapareciendo. Reaplicando atributos y sincronizando PlayerStats.",
                 player.getName().getString());
 
-        // Reaplicar modificadores y restaurar salud
-        player.getCapability(PlayerStats.PLAYER_STATS_CAPABILITY).ifPresent(stats -> {
-            int currentLevel = stats.getLevel();
-
-            AttributeCalculator.CalculatedBonuses currentBonuses = AttributeCalculator.calculateBonuses(player);
-            AttributeCalculator.applyAttributeModifiers(player, currentBonuses, currentLevel,
-                    LevelingManager.LEVEL_BONUS_MODIFIER_UUID, LevelingManager.LEVEL_BONUS_MODIFIER_UUID);
-            RpgStatsMod.LOGGER.debug("Modificadores reaplicados para nivel {} tras respawn.", currentLevel);
-
-            player.setHealth(player.getMaxHealth());
-            RpgStatsMod.LOGGER.debug("Salud restaurada tras respawn para {}.", player.getName().getString());
-        });
+        // Reaplicar modificadores y restaurar salud usando el LevelingManager
+        LevelingManager.applyPostRespawnEffects(player);
 
         // Finalmente sincronizar los datos al cliente
         syncPlayerStats(player);
