@@ -134,5 +134,14 @@ public class EventListeners {
             LOGGER.warn("ServerPlayerPatch not found for {}", player.getName().getString());
         }
     }
+
+    public static void applyAllEventListeners(ServerPlayer player){
+        applyAttackEventListener(player);
+        applyDealAttackEventListener(player);
+        applyDealHurtEventListener(player);
+        applyDealDamageEventListener(player);
+        applyTakeDamageEventListener(player);
+        applyDodgeSuccessEventListener(player);
+    }
 }
 

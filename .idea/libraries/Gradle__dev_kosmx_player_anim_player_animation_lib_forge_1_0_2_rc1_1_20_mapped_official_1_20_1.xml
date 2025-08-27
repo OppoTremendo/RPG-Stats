@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: dev.kosmx.player-anim:player-animation-lib-forge:1.0.2-rc1+1.20_mapped_official_1.20.1" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="dev.kosmx.player-anim" artifactId="player-animation-lib-forge" version="1.0.2-rc1+1.20_mapped_official_1.20.1" baseVersion="1.0.2-rc1+1.20_mapped_official_1.20.1" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/forge_gradle/deobf_dependencies/dev/kosmx/player-anim/player-animation-lib-forge/1.0.2-rc1+1.20_mapped_official_1.20.1/player-animation-lib-forge-1.0.2-rc1+1.20_mapped_official_1.20.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/forge_gradle/deobf_dependencies/dev/kosmx/player-anim/player-animation-lib-forge/1.0.2-rc1+1.20_mapped_official_1.20.1/player-animation-lib-forge-1.0.2-rc1+1.20_mapped_official_1.20.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

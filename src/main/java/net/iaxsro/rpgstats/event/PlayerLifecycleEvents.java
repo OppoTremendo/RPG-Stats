@@ -14,6 +14,7 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+import net.iaxsro.rpgstats.attributesystem.EventListeners;
 
 
 // Escucha eventos en el bus de FORGE (implícito)
@@ -93,6 +94,7 @@ public class PlayerLifecycleEvents {
 
         // Finalmente sincronizar los datos al cliente
         syncPlayerStats(player);
+        EventListeners.applyAllEventListeners(player);
     }
 
     /**
